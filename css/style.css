@@ -11,6 +11,17 @@ body, html {
   position: relative;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+section {
+  padding: 60px 0;
+}
+
 header.navbar {
   position: fixed;
   top: 0;
@@ -83,6 +94,12 @@ header.navbar .navbar-nav li a:hover {
 
 header.navbar .navbar-menu {
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 70px;
   height: 62.5px;
   padding: .25rem;
@@ -90,12 +107,6 @@ header.navbar .navbar-menu {
   cursor: pointer;
   background: transparent;
   border-radius: 5px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   -webkit-transition: .5s;
@@ -139,7 +150,7 @@ header.navbar .navbar-menu #hamburger {
 
 header.navbar .navbar-menu #hamburger span {
   width: 2.5rem;
-  height: .25rem;
+  height: 0.25rem;
   position: relative;
   top: 25%;
   left: 20%;
@@ -164,8 +175,8 @@ header.navbar .navbar-menu #hamburger span:nth-child(3) {
 
 header.navbar .navbar-menu #cross {
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   top: 0;
@@ -173,8 +184,8 @@ header.navbar .navbar-menu #cross {
 }
 
 header.navbar .navbar-menu #cross span:nth-child(1) {
+  width: 0.25rem;
   height: 0%;
-  width: .25rem;
   position: absolute;
   top: 15%;
   left: 2rem;
@@ -183,8 +194,8 @@ header.navbar .navbar-menu #cross span:nth-child(1) {
 }
 
 header.navbar .navbar-menu #cross span:nth-child(2) {
-  height: .25rem;
   width: 0%;
+  height: 0.25rem;
   position: absolute;
   top: 2rem;
   left: 15%;
@@ -413,5 +424,107 @@ section#index .keys .key5-1 {
 section#index .keys .key5-2 {
   -webkit-animation: key1 11s infinite 13s;
           animation: key1 11s infinite 13s;
+}
+
+section#hi {
+  width: 100%;
+  height: 100%;
+  padding: 70px 0px;
+  text-align: center;
+}
+
+section#hi h2 {
+  color: #958DAA;
+  font-size: 30px;
+}
+
+section#hi p {
+  margin: 0;
+  font-size: 22px;
+}
+
+section#works {
+  background-color: #DEDDE5;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+}
+
+section#works .work {
+  z-index: 17;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+section#works .work:hover .text, section#works .work:hover .workbox {
+  opacity: 1;
+}
+
+section#works .work a {
+  text-decoration: none;
+}
+
+section#works .work .workbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: 5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section#works .work img {
+  width: 100%;
+}
+
+section#works .work .text {
+  font-size: 15px;
+  letter-spacing: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+}
+
+footer#footer {
+  width: 100%;
+  height: 100%;
+  background-color: #958DAA;
+  position: relative;
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer#footer .logo {
+  width: 50px;
 }
 /*# sourceMappingURL=style.css.map */
