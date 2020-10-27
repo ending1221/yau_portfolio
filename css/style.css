@@ -4,6 +4,13 @@
   font-family: 'Chivo','微軟正黑體';
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  color: #7D7D7D;
+  position: relative;
+}
+
 header.navbar {
   position: fixed;
   top: 0;
@@ -22,21 +29,18 @@ header.navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+}
+
+header.navbar #indexLogo {
+  width: 30px;
+  margin: 20px;
 }
 
 header.navbar * {
   text-decoration: none;
-}
-
-header.navbar a {
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header.navbar a:hover {
-  color: #DEDDE5;
 }
 
 header.navbar .navbar-nav {
@@ -63,6 +67,18 @@ header.navbar .navbar-nav {
 header.navbar .navbar-nav li {
   list-style: none;
   margin-left: 25px;
+}
+
+header.navbar .navbar-nav li a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #DEDDE5;
+  padding: 0px;
+}
+
+header.navbar .navbar-nav li a:hover {
+  color: #958DAA;
+  border-bottom: solid 1px #958DAA;
 }
 
 header.navbar .navbar-menu {
@@ -232,5 +248,170 @@ header.navbar .navbar-menu.open #cross span:nth-child(2) {
 
 .navbar.open .navbar-nav li a {
   display: block;
+}
+
+section#index {
+  background-color: #4C455E;
+  padding: 240px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+section#index .text {
+  color: #fff;
+  padding: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+section#index .explore {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 5%;
+  opacity: 0.7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #25232B;
+}
+
+section#index .explore:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 15px;
+  background-color: #25232B;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -10px;
+}
+
+section#index .explore:hover {
+  opacity: 1;
+}
+
+section#index .keys [class^="key"] {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: inline-block;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+section#index .keys [class^="key"] img {
+  width: 80px;
+  vertical-align: bottom;
+  display: inline-block;
+  position: relative;
+  left: 0x;
+}
+
+@-webkit-keyframes key1 {
+  0% {
+    left: 0px;
+  }
+  3% {
+    left: -80px;
+  }
+  70% {
+    left: -80px;
+  }
+  73% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes key1 {
+  0% {
+    left: 0px;
+  }
+  3% {
+    left: -80px;
+  }
+  70% {
+    left: -80px;
+  }
+  73% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+section#index .keys .key1-1 {
+  -webkit-animation: key1 10s infinite 3s;
+          animation: key1 10s infinite 3s;
+}
+
+section#index .keys .key1-2 {
+  -webkit-animation: key1 10s infinite 3s;
+          animation: key1 10s infinite 3s;
+}
+
+section#index .keys .key2-1 {
+  -webkit-animation: key1 11s infinite 11s;
+          animation: key1 11s infinite 11s;
+}
+
+section#index .keys .key2-2 {
+  -webkit-animation: key1 11s infinite 11s;
+          animation: key1 11s infinite 11s;
+}
+
+section#index .keys .key3-1 {
+  -webkit-animation: key1 10s infinite 17s;
+          animation: key1 10s infinite 17s;
+}
+
+section#index .keys .key3-2 {
+  -webkit-animation: key1 10s infinite 17s;
+          animation: key1 10s infinite 17s;
+}
+
+section#index .keys .key4-1 {
+  -webkit-animation: key1 10s infinite 6s;
+          animation: key1 10s infinite 6s;
+}
+
+section#index .keys .key4-2 {
+  -webkit-animation: key1 10s infinite 6s;
+          animation: key1 10s infinite 6s;
+}
+
+section#index .keys .key5-1 {
+  -webkit-animation: key1 11s infinite 13s;
+          animation: key1 11s infinite 13s;
+}
+
+section#index .keys .key5-2 {
+  -webkit-animation: key1 11s infinite 13s;
+          animation: key1 11s infinite 13s;
 }
 /*# sourceMappingURL=style.css.map */
