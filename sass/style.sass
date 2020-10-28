@@ -27,6 +27,7 @@ $grey_5: #171224
     align-items: center
 
 =xycenter
+    position: absolute
     left: 50%
     top: 50%
     transform: translate(-50%,-50%)
@@ -79,6 +80,7 @@ header.navbar
     .navbar-nav
         padding: 0
         margin: 0
+        margin-right: 2rem
         display: flex
         flex-wrap: nowrap
         transition: 0.5s
@@ -90,7 +92,8 @@ header.navbar
 
         li
             list-style: none
-            margin-left: 25px
+            margin: 1.5rem
+
             a
                 transition: 0.5s
                 color: $purple_1
@@ -215,7 +218,7 @@ header.navbar
                 display: block
 
 section#index
-    background-color: $purple_5
+    // background-color: $purple_5
     padding: 240px 0px
     +flexcenter
     flex-direction: column
@@ -271,26 +274,12 @@ section#index
                 left: 0px
             100%
                 left: 0px
-        .key1-1
-            animation: key1 10s infinite 3s
-        .key1-2
-            animation: key1 10s infinite 3s
-        .key2-1
-            animation: key1 11s infinite 11s
-        .key2-2
-            animation: key1 11s infinite 11s
-        .key3-1
-            animation: key1 10s infinite 17s
-        .key3-2
-            animation: key1 10s infinite 17s
-        .key4-1
-            animation: key1 10s infinite 6s
-        .key4-2
-            animation: key1 10s infinite 6s
-        .key5-1
-            animation: key1 11s infinite 13s
-        .key5-2
-            animation: key1 11s infinite 13s
+
+        @for $i from 1 through 10
+            & :nth-child(#{$i})
+                @for $j from 1 through 2
+                    img
+                        animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
 
 section#hi
     +size(100%)
@@ -312,17 +301,18 @@ section#works
     .work
         z-index: 17
         box-sizing: border-box
-        +size(100%)
+        +size(33.333333%, auto)
+        // flex: 0 0 33.333333%;
         overflow: hidden
         padding: 0
+        position: relative
         &:hover
             .text,.workbox
                 opacity: 1
         a
             text-decoration: none
         .workbox
-            +size(100%)
-            position: absolute
+            +size(100.5%)
             +xycenter
             background-color: rgba(0,0,0,0.7)
             opacity: 0
@@ -331,11 +321,11 @@ section#works
 
         img
             width: 100%
+            height: 100%
 
         .text
             font-size: 15px
             letter-spacing: 1px
-            position: absolute
             +xycenter
             z-index: 5
             opacity: 0

@@ -1,0 +1,7 @@
+:root {
+    --background-color:#4C455E;
+}
+
+section#index {
+    background: var(--background-color);
+}
