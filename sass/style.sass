@@ -17,6 +17,10 @@ $grey_5: #171224
     @media(max-width: 768px)
         @content
 
+=min1400
+    @media(min-width: 1400px)
+        @content
+
 =size($w,$h:$w)
     width: $w
     height: $h
@@ -302,13 +306,15 @@ section#works
         z-index: 17
         box-sizing: border-box
         +size(33.333333%, auto)
-        // flex: 0 0 33.333333%;
         overflow: hidden
         padding: 0
         position: relative
+        @include min1400
+            +size(25%, auto)
         &:hover
             .text,.workbox
                 opacity: 1
+        
         a
             text-decoration: none
         .workbox
@@ -341,3 +347,14 @@ footer#footer
     +flexcenter
     .logo
         width: 50px
+
+
+.modal
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1050
+    outline: 0
+    background-color: rgba(34, 36, 38, 0.8)
