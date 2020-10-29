@@ -377,58 +377,53 @@ section#index .keys [class^="key"] img {
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 9s infinite 1.5s;
-          animation: key1 9s infinite 1.5s;
+  -webkit-animation: key1 9s infinite 1.75s;
+          animation: key1 9s infinite 1.75s;
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 7s infinite 2.5s;
-          animation: key1 7s infinite 2.5s;
+  -webkit-animation: key1 7s infinite 1.5s;
+          animation: key1 7s infinite 1.5s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 7s infinite 2.25s;
-          animation: key1 7s infinite 2.25s;
+  -webkit-animation: key1 10s infinite 2.5s;
+          animation: key1 10s infinite 2.5s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 8s infinite 3.5s;
-          animation: key1 8s infinite 3.5s;
+  -webkit-animation: key1 10s infinite 2.5s;
+          animation: key1 10s infinite 2.5s;
 }
 
 section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 11s infinite 3.5s;
-          animation: key1 11s infinite 3.5s;
+  -webkit-animation: key1 9s infinite 4s;
+          animation: key1 9s infinite 4s;
 }
 
 section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 11s infinite 5s;
-          animation: key1 11s infinite 5s;
+  -webkit-animation: key1 11s infinite 4.5s;
+          animation: key1 11s infinite 4.5s;
 }
 
 section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 9s infinite 4.25s;
-          animation: key1 9s infinite 4.25s;
+  -webkit-animation: key1 7s infinite 5s;
+          animation: key1 7s infinite 5s;
 }
 
 section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 7s infinite 4.5s;
-          animation: key1 7s infinite 4.5s;
+  -webkit-animation: key1 9s infinite 5.5s;
+          animation: key1 9s infinite 5.5s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 10s infinite 5.75s;
-          animation: key1 10s infinite 5.75s;
+  -webkit-animation: key1 9s infinite 5.75s;
+          animation: key1 9s infinite 5.75s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 9s infinite 6.5s;
-          animation: key1 9s infinite 6.5s;
-}
-
-section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 7s infinite 6.5s;
-          animation: key1 7s infinite 6.5s;
+  -webkit-animation: key1 10s infinite 6s;
+          animation: key1 10s infinite 6s;
 }
 
 section#index .keys :nth-child(6) img {
@@ -436,44 +431,49 @@ section#index .keys :nth-child(6) img {
           animation: key1 7s infinite 7s;
 }
 
-section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 9s infinite 8s;
-          animation: key1 9s infinite 8s;
+section#index .keys :nth-child(6) img {
+  -webkit-animation: key1 10s infinite 8s;
+          animation: key1 10s infinite 8s;
 }
 
 section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 8s infinite 8s;
-          animation: key1 8s infinite 8s;
+  -webkit-animation: key1 7s infinite 8s;
+          animation: key1 7s infinite 8s;
+}
+
+section#index .keys :nth-child(7) img {
+  -webkit-animation: key1 9s infinite 7.5s;
+          animation: key1 9s infinite 7.5s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 10s infinite 8.25s;
-          animation: key1 10s infinite 8.25s;
+  -webkit-animation: key1 7s infinite 8.5s;
+          animation: key1 7s infinite 8.5s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 8s infinite 8.5s;
-          animation: key1 8s infinite 8.5s;
+  -webkit-animation: key1 8s infinite 10s;
+          animation: key1 8s infinite 10s;
 }
 
 section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 8s infinite 9.25s;
-          animation: key1 8s infinite 9.25s;
+  -webkit-animation: key1 11s infinite 9.25s;
+          animation: key1 11s infinite 9.25s;
 }
 
 section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 10s infinite 11s;
-          animation: key1 10s infinite 11s;
+  -webkit-animation: key1 7s infinite 9.5s;
+          animation: key1 7s infinite 9.5s;
 }
 
 section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 8s infinite 11s;
-          animation: key1 8s infinite 11s;
+  -webkit-animation: key1 7s infinite 11s;
+          animation: key1 7s infinite 11s;
 }
 
 section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 11s infinite 12s;
-          animation: key1 11s infinite 12s;
+  -webkit-animation: key1 11s infinite 11.5s;
+          animation: key1 11s infinite 11.5s;
 }
 
 section#hi {
@@ -587,36 +587,8 @@ footer#footer .logo {
   width: 50px;
 }
 
-.fade {
-  opacity: 0;
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.fade.fadeIn {
-  opacity: 1;
-  -webkit-transition: .15s;
-  transition: .15s;
-  -webkit-transition-delay: .15s;
-          transition-delay: .15s;
-}
-
 .modal {
-  -webkit-transition: .15s;
-  transition: .15s;
-}
-
-.modal .modal_main {
-  -webkit-transform: translate(0, -5rem);
-          transform: translate(0, -5rem);
-  -webkit-transition: .15s;
-  transition: .15s;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
-}
-
-.modal.show {
-  position: fixed;
+  display: none;
   top: 0;
   right: 0;
   bottom: 0;
@@ -624,6 +596,52 @@ footer#footer .logo {
   z-index: 1050;
   outline: 0;
   background-color: rgba(34, 36, 38, 0.8);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.modal * {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.modal .modal_main {
+  -webkit-transform: translate(0, -10rem);
+          transform: translate(0, -10rem);
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+
+.modal .modal_main_header {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.modal .modal_main_header .close {
+  background-color: transparent;
+  border: none;
+  padding: 0 .25rem;
+  float: right;
+  font-size: 1.5rem;
+  color: #fff;
+  opacity: .5;
+}
+
+.modal .modal_main_header .close:hover {
+  opacity: 1;
+}
+
+.modal .modal_main_body {
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.modal .modal_main_footer {
+  padding: 1.5rem;
+}
+
+.modal.show {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,9 +651,17 @@ footer#footer .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
 }
 
 .modal.show .modal_main {
+  -webkit-transition: .25s;
+  transition: .25s;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
   width: 85vw;
   height: auto;
   overflow: hidden;
@@ -644,39 +670,5 @@ footer#footer .logo {
           box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
-}
-
-.modal.show .modal_main_header {
-  padding: 1.5rem;
-  position: relative;
-}
-
-.modal.show .modal_main_header .close {
-  background-color: transparent;
-  border: none;
-  padding: 0 .25rem;
-  float: right;
-  font-size: 1.5rem;
-  color: #fff;
-  opacity: .5;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.modal.show .modal_main_header .close:hover {
-  opacity: 1;
-}
-
-.modal.show .modal_main_body {
-  height: 70vh;
-  overflow-y: auto;
-}
-
-.modal.show .modal_main_footer {
-  padding: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

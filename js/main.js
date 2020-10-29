@@ -67,7 +67,6 @@ class Modal {
         this.$outer = $outer;
         this.getHtml()
         this.closeOnclick()
-        this.$outer.addClass('fade')
     }
     getHtml() {
         const html = `
@@ -89,7 +88,7 @@ class Modal {
     }
     showSouce() {
         if (this.workIndex === null) return
-        this.$outer.addClass('show fadeIn').fadeIn();
+        this.$outer.addClass('show').fadeIn();
         const data = this.datas[this.workIndex]
         const text = `<div class="modal_main_body_text">${data.name}</div>`
         this.$title.text(data.name);
@@ -105,11 +104,11 @@ class Modal {
         }
     }
     emptySouce() {
-        this.$outer.removeClass('show fadeIn');
+        this.$outer.removeClass('show').fadeOut('1500');
         this.workIndex = null;
-        this.$title.empty()
-        this.$imgs.empty()
-        this.$texts.empty()
+        // this.$title.empty()
+        // this.$imgs.empty()
+        // this.$texts.empty()
     }
     closeOnclick() {
         $('.modal_main button.close').click(() => {
@@ -137,3 +136,9 @@ function workOnclick() {
 const modal = new Modal($('.modal'));
 getWorkData();
 workOnclick();
+
+$('.navbar-menu').click(function(){
+	$(this).toggleClass('open');
+	$(".navbar").toggleClass('open');
+	// $(".navbar-nav").toggleClass('open');
+})

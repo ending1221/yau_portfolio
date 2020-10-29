@@ -348,24 +348,8 @@ footer#footer
     .logo
         width: 50px
 
-.fade 
-    opacity: 0
-    transition: .15s
-
-.fade.fadeIn
-    opacity: 1
-    transition: .15s
-    transition-delay: .15s
-
 .modal
-    transition: .15s
-    .modal_main
-        transform: translate(0,-5rem)
-        transition: .15s
-        transition-delay: .3s
-
-.modal.show
-    position: fixed
+    display: none
     top: 0
     right: 0
     bottom: 0
@@ -373,19 +357,19 @@ footer#footer
     z-index: 1050
     outline: 0
     background-color: rgba(34, 36, 38, 0.8)
-    +flexcenter
+    transition: .5s
+
+    *
+        transition: .5s
+
     .modal_main
-        +size(85vw, auto)
-        overflow: hidden
-        background-color: $purple_5
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
-        border: 1px solid rgba(0,0,0,.2)
-        border-radius: .5rem
-        transform: translate(0,0)
-        transition-delay: .3s
+        transform: translate(0,-10rem)
+        transition-delay: .5s
+
         &_header
             padding: 1.5rem
             position: relative
+
             .close
                 background-color: transparent
                 border: none
@@ -394,7 +378,6 @@ footer#footer
                 font-size: 1.5rem
                 color: $white
                 opacity: .5
-                transition: .5s
                 &:hover
                     opacity: 1
 
@@ -404,4 +387,22 @@ footer#footer
         &_footer
             padding: 1.5rem
 
+
+.modal.show
+    position: fixed
+    +flexcenter
+    transition: .5s
+    transition-delay: 1s
+
+    .modal_main
+        transition: .25s
+        transform: translate(0,0)
+
+        +size(85vw, auto)
+        overflow: hidden
+        background-color: $purple_5
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
+        border: 1px solid rgba(0,0,0,.2)
+        border-radius: .5rem
         
+
