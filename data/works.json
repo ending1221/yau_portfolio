@@ -2,101 +2,101 @@
     {
         "img": "img/torii.jpg",
         "url": "https://ending1221.github.io/Torii/",
-        "text": "Torii"
+        "name": "Torii"
     },
     {
         "img": "img/reactPage.jpg",
         "url": "https://ending1221.github.io/react-page/",
-        "text": "React.js Cart"
+        "name": "React.js Cart"
     },
     {
         "img": "img/ems_dashboard.jpg",
         "url": "https://www.notion.so/EMS-4715f6cf6cd7466794d3ac55b5476cfe",
-        "text": "Cyan EMS Dashboard"
+        "name": "Cyan EMS Dashboard"
     },
     {
         "img": "img/lavender.jpg",
         "url": "https://codepen.io/Yau1221/full/BaypQzr",
-        "text": "Lavender Web Design"
+        "name": "Lavender Web Design"
     },
     {
         "img": "img/oee.jpg",
         "url": "https://www.notion.so/7dc0608939384b45a58cb55b9d57c291",
-        "text": "Cyan OEE Dashboard"
+        "name": "Cyan OEE Dashboard"
     },
     {
         "img": "img/weatherCrystalBall.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_Crystal-ball/",
-        "text": "weather crystal ball"
+        "name": "weather crystal ball"
     },
     {
         "img": "img/toemomo_web.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_index/",
-        "text": "Toemomo Web Design"
+        "name": "Toemomo Web Design"
     },
     {
         "img": "img/catchGame.jpg",
         "url": "https://ending1221.github.io/Catch-game/",
-        "text": "Catch game"
+        "name": "Catch game"
     },
     {
         "img": "img/piano.jpg",
         "url": "https://codepen.io/Yau1221/full/KKwqeBo",
-        "text": "Vue.js Piano"
+        "name": "Vue.js Piano"
     },
     {
         "img": "img/toemomo_character.jpg",
         "url": "https://codepen.io/Yau1221/full/JjoXpVw",
-        "text": "Toemomo character demo"
+        "name": "Toemomo character demo"
     },
     {
         "img": "img/shootingDartsGame.jpg",
         "url": "https://codepen.io/Yau1221/full/jOEzRyw",
-        "text": "shooting darts game"
+        "name": "shooting darts game"
     },
     {
         "img": "img/ems_web.jpg",
         "url": "https://www.notion.so/EMS-a6fd284386ac4149b572a53c5e13fcc9",
-        "text": "Cyan EMS Web"
+        "name": "Cyan EMS Web"
     },
     {
         "img": "img/getBeer.jpg",
         "url": "https://codepen.io/Yau1221/full/MWYrdKg",
-        "text": "Get some beer!"
+        "name": "Get some beer!"
     },
     {
         "img": "img/buylist.jpg",
         "url": "https://codepen.io/Yau1221/full/ExaydqL",
-        "text": "Buylist"
+        "name": "Buylist"
     },
     {
         "img": "img/posterDesign.jpg",
         "url": "https://codepen.io/Yau1221/full/GRgXeBM",
-        "text": "Poster design"
+        "name": "Poster design"
     },
     {
         "img": "img/asahiProject.jpg",
         "url": "",
-        "text": "Asahi project"
+        "name": "Asahi project"
     },
     {
         "img": "img/cardsDesign.jpg",
         "url": "",
-        "text": "Cards design"
+        "name": "Cards design"
     },
     {
         "img": "img/damuheiPoliModel.jpg",
         "url": "https://codepen.io/Yau1221/full/eYmLWzy",
-        "text": "Damuhei poli model"
+        "name": "Damuhei poli model"
     },
     {
         "img": "img/giftPremiumDesign.jpg",
         "url": "https://codepen.io/Yau1221/full/wvBEJVa",
-        "text": "Gift premium design"
+        "name": "Gift premium design"
     },
     {
         "img": "img/couponDesign.jpg",
         "url": "https://codepen.io/Yau1221/full/MWYBVeR",
-        "text": "Coupon"
+        "name": "Coupon"
     }
 ]

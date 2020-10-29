@@ -350,6 +350,9 @@ footer#footer
 
 
 .modal
+    display: none
+
+.modal.show
     position: fixed
     top: 0
     right: 0
@@ -358,3 +361,34 @@ footer#footer
     z-index: 1050
     outline: 0
     background-color: rgba(34, 36, 38, 0.8)
+    +flexcenter
+    .modal_main
+        +size(85vw, auto)
+        overflow: hidden
+        background-color: $purple_5
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
+        border: 1px solid rgba(0,0,0,.2)
+        border-radius: .5rem
+        transition: transform .3s ease-out
+        &_header
+            padding: 1.5rem
+            position: relative
+            .close
+                background-color: transparent
+                border: none
+                padding: 0 .25rem
+                float: right
+                font-size: 1.5rem
+                color: $white
+                opacity: .5
+                transition: .5s
+                &:hover
+                    opacity: 1
+
+        &_body
+            height: 70vh
+            overflow-y: auto
+        &_footer
+            padding: 1.5rem
+
+        

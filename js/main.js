@@ -34,8 +34,8 @@ function getWork(data) {
         html += `
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
-            <img src=${work.img} alt=${work.text} />
-            <a class="text" href=${work.url} target="_blank">${work.text}</a>
+            <img src=${work.img} alt=${work.name} />
+            <a class="text" href=${work.url} target="_blank">${work.name}</a>
         </div>`
     })
     $('section#works').html(html)
@@ -61,43 +61,65 @@ $('#index').mousemove(function (evt) {
 });
 
 class Modal {
-    constructor() {
+    constructor($outer) {
         this.datas = null;
         this.workIndex = null;
-        console.log(this.getHtml())
+        this.$outer = $outer;
+        this.getHtml()
+        this.closeOnclick()
     }
     getHtml() {
-        const html = this.datas ? `
+        const html = `
             <div class="modal_main">
                 <div class="modal_main_header">
                     <button class="close" aria-hidden="true">x</button>
                     <div class="modal_main_title"></div>
                 </div>
                 <div class="modal_main_body">
-                    ${this.workIndex ? this.getBodyContent(this.data[this.workIndex]) : ''}
+                    <div class="modal_main_body_imgs"></div>
+                    <div class="modal_main_body_texts"></div>
                 </div>
                 <div class="modal_main_footer"></div>
             </div>` 
-        : ''
-        return html
+        this.$outer.html(html)
+        this.$title = $('.modal_main .modal_main_title');
+        this.$imgs = $('.modal_main .modal_main_body_imgs');
+        this.$texts = $('.modal_main .modal_main_body_texts');
     }
-    getBodyContent(data) {
-        return `
-        <div class="modal_main_body_imgs">
-            ${this.getImgsHtml(data)}
-        </div>
-        <div class="modal_main_body_texts">
-            <div class="modal_main_body_text"></div>
+    showSouce() {
+        if (this.workIndex === null) return
+        this.$outer.addClass('show');
+        const data = this.datas[this.workIndex]
+        const text = `<div class="modal_main_body_text">${data.name}</div>`
+        this.$title.text(data.name);
+        this.$imgs.html(this.getImgsHtml())
+        this.$texts.html(text)
+        if (data.url) {
+            // 有連結才顯示按紐
+            const btn = `
             <a href=${data.url} target="_blank" class="modal_btn">
                 <span class="modal_btn_content">Go to demo</span>
-            </a>
-        </div>`
+            </a>`
+            this.$texts.append(btn)
+        }
+    }
+    emptySouce() {
+        this.$outer.removeClass('show');
+        this.workIndex = null;
+        this.$title.empty()
+        this.$imgs.empty()
+        this.$texts.empty()
+    }
+    closeOnclick() {
+        $('.modal_main button.close').click(() => {
+            this.emptySouce()
+        })
     }
     getImgsHtml(data) {
         let html = '';
-        data.map(img => {
-            html += `<img class="modal_main_body_img" src=${img} alt="work" />`
-        })
+        // data.map(img => {
+        //     html += `<img class="modal_main_body_img" src=${img} alt="work" />`
+        // })
         return html
     }
 }
@@ -106,11 +128,11 @@ function workOnclick() {
     $('section#works').on('click', '.work', function() {
         console.log($(this).data('index'))
         modal.workIndex = $(this).data('index');
-        $('.modal').append(modal.getHtml());
+        modal.showSouce();
     })
     
 }
 
-const modal = new Modal;
+const modal = new Modal($('.modal'));
 getWorkData();
 workOnclick();
