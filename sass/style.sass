@@ -348,9 +348,21 @@ footer#footer
     .logo
         width: 50px
 
+.fade 
+    opacity: 0
+    transition: .15s
+
+.fade.fadeIn
+    opacity: 1
+    transition: .15s
+    transition-delay: .15s
 
 .modal
-    display: none
+    transition: .15s
+    .modal_main
+        transform: translate(0,-5rem)
+        transition: .15s
+        transition-delay: .3s
 
 .modal.show
     position: fixed
@@ -369,7 +381,8 @@ footer#footer
         box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
         border: 1px solid rgba(0,0,0,.2)
         border-radius: .5rem
-        transition: transform .3s ease-out
+        transform: translate(0,0)
+        transition-delay: .3s
         &_header
             padding: 1.5rem
             position: relative

@@ -67,6 +67,7 @@ class Modal {
         this.$outer = $outer;
         this.getHtml()
         this.closeOnclick()
+        this.$outer.addClass('fade')
     }
     getHtml() {
         const html = `
@@ -88,7 +89,7 @@ class Modal {
     }
     showSouce() {
         if (this.workIndex === null) return
-        this.$outer.addClass('show');
+        this.$outer.addClass('show fadeIn').fadeIn();
         const data = this.datas[this.workIndex]
         const text = `<div class="modal_main_body_text">${data.name}</div>`
         this.$title.text(data.name);
@@ -104,7 +105,7 @@ class Modal {
         }
     }
     emptySouce() {
-        this.$outer.removeClass('show');
+        this.$outer.removeClass('show fadeIn');
         this.workIndex = null;
         this.$title.empty()
         this.$imgs.empty()
