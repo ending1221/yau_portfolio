@@ -362,36 +362,77 @@ footer#footer
     transition: .25s ease-in-out
 
     .modal_main
+        &:before
+            content: ''
+            position: absolute
+            width: 100%
+            height: 100%
+            border-radius: .5rem
+            top: .25rem
+            left: .35rem
+            border: 1px solid $purple_1
+
+    .modal_main
         transform: translate(0,-10rem)
         transition: .5s ease-in-out
         opacity: 0
 
-        +size(85vw, auto)
-        overflow: hidden
+        +size(80vw, auto)
+        max-width: 1400px
         background-color: $purple_5
         box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
-        border: 1px solid rgba(0,0,0,.2)
         border-radius: .5rem
-        
+        position: relative
 
         &_header
             padding: 1.5rem
             position: relative
+            font-size: 1.5rem
+            letter-spacing: 1px
+            color: $white
 
             .close
                 background-color: transparent
                 border: none
                 padding: 0 .25rem
                 float: right
-                font-size: 1.5rem
                 color: $white
                 opacity: .5
+                cursor: pointer
+                font-size: 2rem
                 &:hover
                     opacity: 1
 
         &_body
+            width: 100%
             height: 70vh
             overflow-y: auto
+            background-color: rgba($grey_4,0.5)
+            display: flex
+            position: relative
+            &_img
+                width: 70%
+                img
+                    max-width: 1000px
+                    width: 100%
+                    margin-right: auto
+                    margin-left: auto
+                    
+            &_texts
+                width: 30%
+                padding: 2rem
+                color: $white
+                p
+                    font-weight: 300
+            .modal_btn 
+                padding: 1rem 2.5rem
+                margin-top: 3rem
+                border-radius: .25rem
+                background-color: $purple_1
+                color: $grey_3
+                transition: 0.5s
+                &:hover
+                    opacity: 0.6
         &_footer
             padding: 1.5rem
 
@@ -404,3 +445,12 @@ footer#footer
         transform: translate(0,0)
         opacity: 1
 
+::-webkit-scrollbar 
+    background-color: rgba($grey_4,0.8)
+    color: rgba($purple_2,0.5)
+
+::-webkit-scrollbar-corner 
+    background-color: rgba($grey_4,0.8)
+
+::-webkit-scrollbar-thumb 
+    background-color: rgba($purple_3,0.8)

@@ -76,30 +76,31 @@ class Modal {
                     <div class="modal_main_title"></div>
                 </div>
                 <div class="modal_main_body">
-                    <div class="modal_main_body_imgs"></div>
+                    <div class="modal_main_body_img"></div>
                     <div class="modal_main_body_texts"></div>
                 </div>
                 <div class="modal_main_footer"></div>
             </div>` 
         this.$outer.html(html)
         this.$title = $('.modal_main .modal_main_title');
-        this.$imgs = $('.modal_main .modal_main_body_imgs');
+        this.$imgs = $('.modal_main .modal_main_body_img');
         this.$texts = $('.modal_main .modal_main_body_texts');
     }
     showSouce() {
         if (this.workIndex === null) return
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
-        const text = `<div class="modal_main_body_text">${data.name}</div>`
+        const text = `<h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>`
+        const img = `<img src="${data.img}" alt=${data.name} />`
         this.$title.text(data.name);
-        this.$imgs.html(this.getImgsHtml())
+        this.$imgs.html(img)
         this.$texts.html(text)
         if (data.url) {
             // 有連結才顯示按紐
             const btn = `
-            <a href=${data.url} target="_blank" class="modal_btn">
-                <span class="modal_btn_content">Go to demo</span>
-            </a>`
+            <button class="modal_btn">
+                <a href=${data.url} target="_blank" class="modal_btn">Go to demo</a>
+            </button>`
             this.$texts.append(btn)
         }
     }
@@ -115,13 +116,7 @@ class Modal {
             this.emptySouce()
         })
     }
-    getImgsHtml(data) {
-        let html = '';
-        // data.map(img => {
-        //     html += `<img class="modal_main_body_img" src=${img} alt="work" />`
-        // })
-        return html
-    }
+
 }
 
 function workOnclick() {
