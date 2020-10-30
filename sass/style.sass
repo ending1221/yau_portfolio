@@ -349,22 +349,30 @@ footer#footer
         width: 50px
 
 .modal
-    display: none
+    visibility: hidden
+    position: fixed
     top: 0
     right: 0
     bottom: 0
     left: 0
     z-index: 1050
+    +flexcenter
     outline: 0
     background-color: rgba(34, 36, 38, 0.8)
-    transition: .5s
-
-    *
-        transition: .5s
+    transition: .25s ease-in-out
 
     .modal_main
         transform: translate(0,-10rem)
-        transition-delay: .5s
+        transition: .5s ease-in-out
+        opacity: 0
+
+        +size(85vw, auto)
+        overflow: hidden
+        background-color: $purple_5
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
+        border: 1px solid rgba(0,0,0,.2)
+        border-radius: .5rem
+        
 
         &_header
             padding: 1.5rem
@@ -389,20 +397,10 @@ footer#footer
 
 
 .modal.show
-    position: fixed
-    +flexcenter
-    transition: .5s
-    transition-delay: 1s
+    visibility: visible
+    transition-delay: .3s
 
     .modal_main
-        transition: .25s
         transform: translate(0,0)
-
-        +size(85vw, auto)
-        overflow: hidden
-        background-color: $purple_5
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
-        border: 1px solid rgba(0,0,0,.2)
-        border-radius: .5rem
-        
+        opacity: 1
 
