@@ -99,7 +99,7 @@ class Modal {
             // 有連結才顯示按紐
             const btn = `
                 <a href=${data.url} target="_blank" class="modal_btn">
-                    Go to demo
+                    <span>Go to demo</span>
                     <span class="arrow"></span>
                 </a>`
             this.$texts.append(btn)

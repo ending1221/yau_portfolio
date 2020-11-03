@@ -437,13 +437,37 @@ footer#footer
                 background-color: $purple_1
                 color: $grey_3
                 transition: 0.5s
+                display: flex
                 &:hover
                     opacity: 0.9
+
+                .arrow
+                    +size(0px)
+                    border-style: solid
+                    border-width: 0px .75rem 1rem .75rem
+                    border-color: transparent transparent $grey_3 transparent 
+                    position: relative
+                    transform: rotate(90deg)
+                    display: block
+                    animation: arrow 1s infinite
+                    margin-left: 2.5rem
+                    &::before
+                        content: ''
+                        +size(.75rem)
+                        background-color: $grey_3
+                        position: absolute
+                        left: -.35rem
+                        top: 1rem
                 
 
         &_footer
             padding: 1.5rem
 
+@keyframes arrow
+	0%,100%
+		transform: rotate(90deg) translateY(0)
+	50%
+		transform: rotate(90deg) translateY(1rem)
 
 .modal.show
     visibility: visible
