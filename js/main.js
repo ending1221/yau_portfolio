@@ -91,7 +91,7 @@ class Modal {
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
         const text = `<h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>`
-        const img = `<img src="${data.img}" alt=${data.name} />`
+        const img = `<img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />`
         this.$title.text(data.name);
         this.$imgs.html(img)
         this.$texts.html(text)
@@ -100,7 +100,10 @@ class Modal {
             const btn = `
                 <a href=${data.url} target="_blank" class="modal_btn">
                     <span>Go to demo</span>
-                    <span class="arrow"></span>
+                    <div class="arrow">
+                        <img src="img/arrow.png" />
+                        <img src="img/arrow_1.png" />
+                    </div>
                 </a>`
             this.$texts.append(btn)
         }

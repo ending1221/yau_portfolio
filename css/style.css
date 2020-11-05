@@ -340,6 +340,106 @@ section#index .keys [class^="key"] img {
   left: 0x;
 }
 
+section#index .keys :nth-child(1) img {
+  -webkit-animation: key1 8s infinite 1.25s;
+          animation: key1 8s infinite 1.25s;
+}
+
+section#index .keys :nth-child(1) img {
+  -webkit-animation: key1 9s infinite 1.5s;
+          animation: key1 9s infinite 1.5s;
+}
+
+section#index .keys :nth-child(2) img {
+  -webkit-animation: key1 11s infinite 2.5s;
+          animation: key1 11s infinite 2.5s;
+}
+
+section#index .keys :nth-child(2) img {
+  -webkit-animation: key1 10s infinite 3.5s;
+          animation: key1 10s infinite 3.5s;
+}
+
+section#index .keys :nth-child(3) img {
+  -webkit-animation: key1 8s infinite 3.5s;
+          animation: key1 8s infinite 3.5s;
+}
+
+section#index .keys :nth-child(3) img {
+  -webkit-animation: key1 11s infinite 4.5s;
+          animation: key1 11s infinite 4.5s;
+}
+
+section#index .keys :nth-child(4) img {
+  -webkit-animation: key1 7s infinite 4.5s;
+          animation: key1 7s infinite 4.5s;
+}
+
+section#index .keys :nth-child(4) img {
+  -webkit-animation: key1 11s infinite 4.5s;
+          animation: key1 11s infinite 4.5s;
+}
+
+section#index .keys :nth-child(5) img {
+  -webkit-animation: key1 7s infinite 6s;
+          animation: key1 7s infinite 6s;
+}
+
+section#index .keys :nth-child(5) img {
+  -webkit-animation: key1 10s infinite 6.5s;
+          animation: key1 10s infinite 6.5s;
+}
+
+section#index .keys :nth-child(6) img {
+  -webkit-animation: key1 10s infinite 7s;
+          animation: key1 10s infinite 7s;
+}
+
+section#index .keys :nth-child(6) img {
+  -webkit-animation: key1 8s infinite 7s;
+          animation: key1 8s infinite 7s;
+}
+
+section#index .keys :nth-child(7) img {
+  -webkit-animation: key1 7s infinite 7.5s;
+          animation: key1 7s infinite 7.5s;
+}
+
+section#index .keys :nth-child(7) img {
+  -webkit-animation: key1 11s infinite 8.5s;
+          animation: key1 11s infinite 8.5s;
+}
+
+section#index .keys :nth-child(8) img {
+  -webkit-animation: key1 10s infinite 8.25s;
+          animation: key1 10s infinite 8.25s;
+}
+
+section#index .keys :nth-child(8) img {
+  -webkit-animation: key1 10s infinite 9.5s;
+          animation: key1 10s infinite 9.5s;
+}
+
+section#index .keys :nth-child(9) img {
+  -webkit-animation: key1 7s infinite 9.75s;
+          animation: key1 7s infinite 9.75s;
+}
+
+section#index .keys :nth-child(9) img {
+  -webkit-animation: key1 9s infinite 10s;
+          animation: key1 9s infinite 10s;
+}
+
+section#index .keys :nth-child(10) img {
+  -webkit-animation: key1 7s infinite 10.75s;
+          animation: key1 7s infinite 10.75s;
+}
+
+section#index .keys :nth-child(10) img {
+  -webkit-animation: key1 7s infinite 10.5s;
+          animation: key1 7s infinite 10.5s;
+}
+
 @-webkit-keyframes key1 {
   0% {
     left: 0px;
@@ -374,106 +474,6 @@ section#index .keys [class^="key"] img {
   100% {
     left: 0px;
   }
-}
-
-section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 7s infinite 2s;
-          animation: key1 7s infinite 2s;
-}
-
-section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 11s infinite 1.5s;
-          animation: key1 11s infinite 1.5s;
-}
-
-section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 9s infinite 3s;
-          animation: key1 9s infinite 3s;
-}
-
-section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 8s infinite 4s;
-          animation: key1 8s infinite 4s;
-}
-
-section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 9s infinite 3.5s;
-          animation: key1 9s infinite 3.5s;
-}
-
-section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 7s infinite 5s;
-          animation: key1 7s infinite 5s;
-}
-
-section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 7s infinite 4.5s;
-          animation: key1 7s infinite 4.5s;
-}
-
-section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 10s infinite 5.5s;
-          animation: key1 10s infinite 5.5s;
-}
-
-section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 9s infinite 5.75s;
-          animation: key1 9s infinite 5.75s;
-}
-
-section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 8s infinite 6.5s;
-          animation: key1 8s infinite 6.5s;
-}
-
-section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 10s infinite 6.25s;
-          animation: key1 10s infinite 6.25s;
-}
-
-section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 10s infinite 7s;
-          animation: key1 10s infinite 7s;
-}
-
-section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 9s infinite 7.75s;
-          animation: key1 9s infinite 7.75s;
-}
-
-section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 11s infinite 9s;
-          animation: key1 11s infinite 9s;
-}
-
-section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 10s infinite 8.25s;
-          animation: key1 10s infinite 8.25s;
-}
-
-section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 11s infinite 10s;
-          animation: key1 11s infinite 10s;
-}
-
-section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 9s infinite 9.25s;
-          animation: key1 9s infinite 9.25s;
-}
-
-section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 9s infinite 10.5s;
-          animation: key1 9s infinite 10.5s;
-}
-
-section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 9s infinite 10.5s;
-          animation: key1 9s infinite 10.5s;
-}
-
-section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 8s infinite 10.5s;
-          animation: key1 8s infinite 10.5s;
 }
 
 section#hi {
@@ -699,10 +699,9 @@ footer#footer .logo {
   border-radius: .25rem;
   text-decoration: none;
   font-size: 1rem;
-  border: none;
+  border: #DEDDE5 solid 0.15rem;
   outline: none;
-  background-color: #DEDDE5;
-  color: #595663;
+  color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: -webkit-box;
@@ -711,58 +710,67 @@ footer#footer .logo {
 }
 
 .modal .modal_main_body .modal_btn:hover {
-  opacity: 0.9;
-}
-
-.modal .modal_main_body .modal_btn .arrow {
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 0px .75rem 1rem .75rem;
-  border-color: transparent transparent #595663 transparent;
-  position: relative;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  display: block;
-  -webkit-animation: arrow 1s infinite;
-          animation: arrow 1s infinite;
-  margin-left: 2.5rem;
-}
-
-.modal .modal_main_body .modal_btn .arrow::before {
-  content: '';
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: #595663;
-  position: absolute;
-  left: -.35rem;
-  top: 1rem;
-}
-
-.modal .modal_main_footer {
-  padding: 1.5rem;
+  background-color: rgba(222, 221, 229, 0.1);
 }
 
 @-webkit-keyframes arrow {
-  0%, 100% {
-    -webkit-transform: rotate(90deg) translateY(0);
-            transform: rotate(90deg) translateY(0);
+  0% {
+    left: 0px;
   }
-  50% {
-    -webkit-transform: rotate(90deg) translateY(1rem);
-            transform: rotate(90deg) translateY(1rem);
+  3% {
+    left: -1.75rem;
+  }
+  70% {
+    left: -1.75rem;
+  }
+  73% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
   }
 }
 
 @keyframes arrow {
-  0%, 100% {
-    -webkit-transform: rotate(90deg) translateY(0);
-            transform: rotate(90deg) translateY(0);
+  0% {
+    left: 0px;
   }
-  50% {
-    -webkit-transform: rotate(90deg) translateY(1rem);
-            transform: rotate(90deg) translateY(1rem);
+  3% {
+    left: -1.75rem;
   }
+  70% {
+    left: -1.75rem;
+  }
+  73% {
+    left: 0px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.modal .modal_main_body .modal_btn .arrow {
+  width: 1.5rem;
+  margin-left: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.modal .modal_main_body .modal_btn .arrow img {
+  -webkit-animation: arrow 5s infinite;
+          animation: arrow 5s infinite;
+  width: 1.5rem;
+  vertical-align: bottom;
+  display: inline-block;
+  position: relative;
+  left: 0x;
+}
+
+.modal .modal_main_footer {
+  padding: 1.5rem;
 }
 
 .modal.show {

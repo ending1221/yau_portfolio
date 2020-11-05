@@ -267,23 +267,23 @@ section#index
                 position: relative
                 left: 0x
 
-        @keyframes key1
-            0%
-                left: 0px
-            3%
-                left: -80px
-            70%
-                left: -80px
-            73%
-                left: 0px
-            100%
-                left: 0px
-
         @for $i from 1 through 10
             & :nth-child(#{$i})
                 @for $j from 1 through 2
                     img
                         animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+
+@keyframes key1
+    0%
+        left: 0px
+    3%
+        left: -80px
+    70%
+        left: -80px
+    73%
+        left: 0px
+    100%
+        left: 0px
 
 section#hi
     +size(100%)
@@ -432,42 +432,45 @@ footer#footer
                 border-radius: .25rem
                 text-decoration: none
                 font-size: 1rem
-                border: none
+                border: $purple_1 solid .15rem
                 outline: none
-                background-color: $purple_1
-                color: $grey_3
+                color: $white
                 transition: 0.5s
                 display: flex
                 &:hover
-                    opacity: 0.9
+                    background-color: rgba($purple_1,0.1)
+
+                    
+                @keyframes arrow
+                    0%
+                        left: 0px
+                    3%
+                        left: -1.75rem
+                    70%
+                        left: -1.75rem
+                    73%
+                        left: 0px
+                    100%
+                        left: 0px
 
                 .arrow
-                    +size(0px)
-                    border-style: solid
-                    border-width: 0px .75rem 1rem .75rem
-                    border-color: transparent transparent $grey_3 transparent 
+                    width: 1.5rem
+                    margin-left: 1rem
+                    transition: 0.5s
+                    overflow: hidden
+                    white-space: nowrap
                     position: relative
-                    transform: rotate(90deg)
-                    display: block
-                    animation: arrow 1s infinite
-                    margin-left: 2.5rem
-                    &::before
-                        content: ''
-                        +size(.75rem)
-                        background-color: $grey_3
-                        position: absolute
-                        left: -.35rem
-                        top: 1rem
+                    img
+                        animation: arrow 5s infinite
+                        width: 1.5rem
+                        vertical-align: bottom
+                        display: inline-block
+                        position: relative
+                        left: 0x
                 
-
         &_footer
             padding: 1.5rem
 
-@keyframes arrow
-	0%,100%
-		transform: rotate(90deg) translateY(0)
-	50%
-		transform: rotate(90deg) translateY(1rem)
 
 .modal.show
     visibility: visible
