@@ -35,7 +35,7 @@ function getWork(data) {
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
             <img src=${work.img} alt=${work.name} />
-            <a class="text" href=${work.url} target="_blank">${work.name}</a>
+            <span class="text">${work.name}</span>
         </div>`
     })
     $('section#works').html(html)
