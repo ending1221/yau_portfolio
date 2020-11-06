@@ -76,21 +76,27 @@ header.navbar .navbar-nav {
   }
 }
 
-header.navbar .navbar-nav li {
+header.navbar .navbar-nav .nav-item {
   list-style: none;
   margin: 1.5rem;
+  border-bottom: solid 1px transparent;
 }
 
-header.navbar .navbar-nav li a {
+header.navbar .navbar-nav .nav-item:hover {
+  border-bottom: solid 1px #958DAA;
+}
+
+header.navbar .navbar-nav .nav-item:hover .nav-link {
+  color: #958DAA;
+  cursor: pointer;
+}
+
+header.navbar .navbar-nav .nav-item .nav-link {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #DEDDE5;
   padding: 0px;
-}
-
-header.navbar .navbar-nav li a:hover {
-  color: #958DAA;
-  border-bottom: solid 1px #958DAA;
+  text-decoration: none;
 }
 
 header.navbar .navbar-menu {
@@ -113,8 +119,8 @@ header.navbar .navbar-menu {
   -webkit-transition: .5s;
   transition: .5s;
   position: absolute;
-  top: 0;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   z-index: 999;
 }
 
@@ -236,7 +242,7 @@ header.navbar .navbar-menu.open #cross span:nth-child(2) {
 }
 
 .navbar.open {
-  background-color: rgba(148, 140, 169, 0.8);
+  background-color: rgba(100, 88, 130, 0.8);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -249,17 +255,24 @@ header.navbar .navbar-menu.open #cross span:nth-child(2) {
   margin-top: 1rem;
 }
 
-.navbar.open .navbar-nav li {
+.navbar.open .navbar-nav .nav-item {
   width: 100%;
   text-align: center;
-  padding: 1rem .5rem;
   margin: 0;
-  background-color: rgba(148, 140, 169, 0.8);
+  background-color: rgba(100, 88, 130, 0.8);
   border-top: rgba(255, 255, 255, 0.6) solid 1px;
+  border-bottom: solid 1px transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.navbar.open .navbar-nav li a {
+.navbar.open .navbar-nav .nav-item:hover {
+  background-color: rgba(76, 69, 94, 0.8);
+}
+
+.navbar.open .navbar-nav .nav-item .nav-link {
   display: block;
+  padding: 1rem .5rem;
 }
 
 section#index {
@@ -341,103 +354,103 @@ section#index .keys [class^="key"] img {
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 9s infinite 1.25s;
-          animation: key1 9s infinite 1.25s;
+  -webkit-animation: key1 7s infinite 1.5s;
+          animation: key1 7s infinite 1.5s;
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 7s infinite 2s;
-          animation: key1 7s infinite 2s;
+  -webkit-animation: key1 9s infinite 2.5s;
+          animation: key1 9s infinite 2.5s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 7s infinite 2.75s;
-          animation: key1 7s infinite 2.75s;
+  -webkit-animation: key1 7s infinite 3s;
+          animation: key1 7s infinite 3s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 9s infinite 3s;
-          animation: key1 9s infinite 3s;
+  -webkit-animation: key1 11s infinite 3.5s;
+          animation: key1 11s infinite 3.5s;
 }
 
 section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 8s infinite 3.5s;
-          animation: key1 8s infinite 3.5s;
+  -webkit-animation: key1 10s infinite 3.25s;
+          animation: key1 10s infinite 3.25s;
 }
 
 section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 9s infinite 3.5s;
-          animation: key1 9s infinite 3.5s;
+  -webkit-animation: key1 9s infinite 4s;
+          animation: key1 9s infinite 4s;
 }
 
 section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 9s infinite 4.25s;
-          animation: key1 9s infinite 4.25s;
+  -webkit-animation: key1 11s infinite 4.5s;
+          animation: key1 11s infinite 4.5s;
 }
 
 section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 8s infinite 5.5s;
-          animation: key1 8s infinite 5.5s;
+  -webkit-animation: key1 10s infinite 4.5s;
+          animation: key1 10s infinite 4.5s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 10s infinite 5.5s;
-          animation: key1 10s infinite 5.5s;
+  -webkit-animation: key1 7s infinite 5.25s;
+          animation: key1 7s infinite 5.25s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 7s infinite 6.5s;
-          animation: key1 7s infinite 6.5s;
+  -webkit-animation: key1 11s infinite 6.5s;
+          animation: key1 11s infinite 6.5s;
 }
 
 section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 8s infinite 7s;
-          animation: key1 8s infinite 7s;
+  -webkit-animation: key1 7s infinite 6.25s;
+          animation: key1 7s infinite 6.25s;
 }
 
 section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 9s infinite 7.5s;
-          animation: key1 9s infinite 7.5s;
+  -webkit-animation: key1 11s infinite 6.5s;
+          animation: key1 11s infinite 6.5s;
 }
 
 section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 8s infinite 7.25s;
-          animation: key1 8s infinite 7.25s;
+  -webkit-animation: key1 10s infinite 7.25s;
+          animation: key1 10s infinite 7.25s;
 }
 
 section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 10s infinite 7.5s;
-          animation: key1 10s infinite 7.5s;
+  -webkit-animation: key1 9s infinite 9s;
+          animation: key1 9s infinite 9s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 8s infinite 8.5s;
-          animation: key1 8s infinite 8.5s;
+  -webkit-animation: key1 11s infinite 8.25s;
+          animation: key1 11s infinite 8.25s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 8s infinite 8.5s;
-          animation: key1 8s infinite 8.5s;
+  -webkit-animation: key1 8s infinite 9s;
+          animation: key1 8s infinite 9s;
 }
 
 section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 11s infinite 10s;
-          animation: key1 11s infinite 10s;
+  -webkit-animation: key1 7s infinite 10s;
+          animation: key1 7s infinite 10s;
 }
 
 section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 11s infinite 10.5s;
-          animation: key1 11s infinite 10.5s;
+  -webkit-animation: key1 11s infinite 9.5s;
+          animation: key1 11s infinite 9.5s;
 }
 
 section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 9s infinite 10.25s;
-          animation: key1 9s infinite 10.25s;
+  -webkit-animation: key1 9s infinite 10.5s;
+          animation: key1 9s infinite 10.5s;
 }
 
 section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 10s infinite 12s;
-          animation: key1 10s infinite 12s;
+  -webkit-animation: key1 8s infinite 11s;
+          animation: key1 8s infinite 11s;
 }
 
 @-webkit-keyframes key1 {
@@ -519,6 +532,13 @@ section#works .work {
 @media (min-width: 1400px) {
   section#works .work {
     width: 25%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  section#works .work {
+    width: 100%;
     height: auto;
   }
 }

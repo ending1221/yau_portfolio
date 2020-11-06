@@ -83,18 +83,22 @@ class Modal {
             </div>` 
         this.$outer.html(html)
         this.$title = $('.modal_main .modal_main_title');
-        this.$imgs = $('.modal_main .modal_main_body_img');
-        this.$texts = $('.modal_main .modal_main_body_texts');
+        this.$body = $('.modal_main .modal_main_body');
     }
     showSouce() {
         if (this.workIndex === null) return
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
-        const text = `<h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>`
-        const img = `<img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />`
+        const html = `
+            <div class="modal_main_body_img">
+                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
+            </div>
+            <div class="modal_main_body_texts">
+                <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
+            </div>`;
         this.$title.text(data.name);
-        this.$imgs.html(img)
-        this.$texts.html(text)
+        this.$body.html(html)
+        this.$texts = $('.modal_main .modal_main_body_texts');
         if (data.url) {
             // 有連結才顯示按紐
             const btn = `
@@ -111,9 +115,8 @@ class Modal {
     emptySouce() {
         this.$outer.removeClass('show')
         this.workIndex = null;
-        // this.$title.empty()
-        // this.$imgs.empty()
-        // this.$texts.empty()
+        this.$title.empty()
+        this.$body.empty();
     }
     closeOnclick() {
         $('.modal_main button.close').click(() => {
@@ -125,7 +128,6 @@ class Modal {
 
 function workOnclick() {
     $('section#works').on('click', '.work', function() {
-        console.log($(this).data('index'))
         modal.workIndex = $(this).data('index');
         modal.showSouce();
     })
@@ -138,6 +140,13 @@ workOnclick();
 
 $('.navbar-menu').click(function(){
 	$(this).toggleClass('open');
-	$(".navbar").toggleClass('open');
-	// $(".navbar-nav").toggleClass('open');
+	$('.navbar').toggleClass('open');
+})
+
+$('.navbar-nav .nav-item').click(function(e){
+    if($(this).find('.nav-link').data('link') === 'about') {
+        $('.modal').addClass('show');
+    }
+    $('.navbar-menu').removeClass('open');
+    $('.navbar').removeClass('open');
 })
