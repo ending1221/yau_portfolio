@@ -113,7 +113,7 @@ class Modal {
         }
     }
     emptySouce() {
-        this.$outer.removeClass('show')
+        this.$outer.removeClass('show about')
         this.workIndex = null;
         this.$title.empty()
         this.$body.empty();
@@ -123,7 +123,160 @@ class Modal {
             this.emptySouce()
         })
     }
+    showAbout() {
+        const html = `
+            <div class="resume">
+                <div class="information">
+                    <div class="icon"><img src="https://bit.ly/2L055qq"/></div>
+                    <div class="texts">
+                        <h1>徐維欣 <span>Wei-Hsin Hsu</span></h1>
+                        <h3>努力打怪的新手前端</h3>
+                        <ul class="contact">
+                            <li><i class="fas fa-home"> </i><span>新北市 新莊</span></li>
+                            <li><i class="fas fa-envelope-open-text"></i><span>ending1221@gmail.com</span></li>
+                            <li><i class="fas fa-mobile-alt"> </i><span>+886 988816884</span></li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="main">
+                    <div class="skill">
+                        <div class="block blocktop"> 
+                        <h4>Skills</h4>
+                        <h2>專業技能</h2>
+                        <hr/>
+                        <ul class="skills">
+                            <li>平面設計
+                            <div class="cir">
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                                <div class="p270"></div>
+                                <div class="p360"></div>
+                            </div>
+                            </li>
+                            <li>行銷企劃
+                            <div class="cir"> 
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                                <div class="p270"></div>
+                            </div>
+                            </li>
+                            <li>影片剪輯
+                            <div class="cir"> 
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                                <div class="p270"></div>
+                            </div>
+                            </li>
+                            <li>網站開發
+                            <div class="cir"> 
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                                <div class="p270"></div>
+                            </div>
+                            </li>
+                            <li>社群行銷
+                            <div class="cir"> 
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                            </div>
+                            </li>
+                            <li>專案管理
+                            <div class="cir"> 
+                                <div class="p90"></div>
+                                <div class="p180"></div>
+                                <div class="p270"></div>
+                            </div>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="block"> 
+                            <h4>Programming Skill</h4>
+                            <h2>程式技能</h2>
+                            <hr/>
+                            <ul class="program">
+                                <li>Html / Css / Sass / Scss
+                                <div class="bar"> 
+                                    <div class="value p80"></div>
+                                </div>
+                                </li>
+                                <li>JavaScript
+                                <div class="bar"> 
+                                    <div class="value p60"></div>
+                                </div>
+                                </li>
+                                <li>jQuery
+                                <div class="bar"> 
+                                    <div class="value p80"></div>
+                                </div>
+                                </li>
+                                <li>React.js
+                                <div class="bar"> 
+                                    <div class="value p40"></div>
+                                </div>
+                                </li>
+                                <li>Git
+                                <div class="bar"> 
+                                    <div class="value p50"></div>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <div class="block blocktop"> 
+                            <h4>Experience</h4>
+                            <h2>工作經歷</h2>
+                            <hr/>
+                            <ul class="workExperience">
+                                <li class="year">2015 
+                                <ul>
+                                    <li class="name">社群行銷</li>
+                                    <li>Social marketing</li>
+                                    <li>管理 Fackbook 粉絲專頁 / 活動提案設計</li>
+                                </ul>
+                                </li>
+                                <li class="year">2015 <br/>|<br/>2019
+                                <ul>
+                                    <li class="name">行銷 / 平面設計師</li>
+                                    <li>Marketing / Designer</li>
+                                    <li>行銷活動提案 / POSM設計 / 網站維護 / 社群行銷 / 電商平台管理 / 影片剪輯</li>
+                                </ul>
+                                </li>
+                                <li class="year">2020
+                                <ul>
+                                    <li class="name">前端工程師</li>
+                                    <li>Front-end engineer</li>
+                                    <li>獨立完成小型專案 / 與後端串接Api / 優化網站 UX / RWD 響應式網頁 / SPA</li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <h4>Education</h4>
+                            <h2>學歷</h2>
+                            <hr/>
+                            <ul class="workExperience">
+                                <li class="year">2009
+                                <ul> 
+                                    <li class="name">復興商工</li>
+                                    <li>廣告設計科 Advertising Design</li>
+                                </ul>
+                                </li>
+                                <li class="year">2011<br/>|<br/>2015
+                                <ul> 
+                                    <li class="name">致理科技大學</li>
+                                    <li>多媒體設計系 <br/>Department of Multimedia Design</li>
+                                </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+
+        this.$body.html(html);
+    }
 }
 
 function workOnclick() {
@@ -145,7 +298,8 @@ $('.navbar-menu').click(function(){
 
 $('.navbar-nav .nav-item').click(function(e){
     if($(this).find('.nav-link').data('link') === 'about') {
-        $('.modal').addClass('show');
+        $('.modal').addClass('show about');
+        modal.showAbout()
     }
     $('.navbar-menu').removeClass('open');
     $('.navbar').removeClass('open');

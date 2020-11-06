@@ -354,28 +354,23 @@ section#index .keys [class^="key"] img {
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 7s infinite 1.5s;
-          animation: key1 7s infinite 1.5s;
+  -webkit-animation: key1 8s infinite 1.5s;
+          animation: key1 8s infinite 1.5s;
 }
 
 section#index .keys :nth-child(1) img {
-  -webkit-animation: key1 9s infinite 2.5s;
-          animation: key1 9s infinite 2.5s;
+  -webkit-animation: key1 8s infinite 3s;
+          animation: key1 8s infinite 3s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 7s infinite 3s;
-          animation: key1 7s infinite 3s;
+  -webkit-animation: key1 11s infinite 2.25s;
+          animation: key1 11s infinite 2.25s;
 }
 
 section#index .keys :nth-child(2) img {
-  -webkit-animation: key1 11s infinite 3.5s;
-          animation: key1 11s infinite 3.5s;
-}
-
-section#index .keys :nth-child(3) img {
-  -webkit-animation: key1 10s infinite 3.25s;
-          animation: key1 10s infinite 3.25s;
+  -webkit-animation: key1 8s infinite 3.5s;
+          animation: key1 8s infinite 3.5s;
 }
 
 section#index .keys :nth-child(3) img {
@@ -383,54 +378,59 @@ section#index .keys :nth-child(3) img {
           animation: key1 9s infinite 4s;
 }
 
-section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 11s infinite 4.5s;
-          animation: key1 11s infinite 4.5s;
+section#index .keys :nth-child(3) img {
+  -webkit-animation: key1 7s infinite 3.5s;
+          animation: key1 7s infinite 3.5s;
 }
 
 section#index .keys :nth-child(4) img {
-  -webkit-animation: key1 10s infinite 4.5s;
-          animation: key1 10s infinite 4.5s;
+  -webkit-animation: key1 10s infinite 4.75s;
+          animation: key1 10s infinite 4.75s;
+}
+
+section#index .keys :nth-child(4) img {
+  -webkit-animation: key1 10s infinite 5s;
+          animation: key1 10s infinite 5s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 7s infinite 5.25s;
-          animation: key1 7s infinite 5.25s;
+  -webkit-animation: key1 9s infinite 5.5s;
+          animation: key1 9s infinite 5.5s;
 }
 
 section#index .keys :nth-child(5) img {
-  -webkit-animation: key1 11s infinite 6.5s;
-          animation: key1 11s infinite 6.5s;
+  -webkit-animation: key1 11s infinite 6s;
+          animation: key1 11s infinite 6s;
 }
 
 section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 7s infinite 6.25s;
-          animation: key1 7s infinite 6.25s;
+  -webkit-animation: key1 8s infinite 6.5s;
+          animation: key1 8s infinite 6.5s;
 }
 
 section#index .keys :nth-child(6) img {
-  -webkit-animation: key1 11s infinite 6.5s;
-          animation: key1 11s infinite 6.5s;
+  -webkit-animation: key1 7s infinite 7s;
+          animation: key1 7s infinite 7s;
 }
 
 section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 10s infinite 7.25s;
-          animation: key1 10s infinite 7.25s;
+  -webkit-animation: key1 11s infinite 7.25s;
+          animation: key1 11s infinite 7.25s;
 }
 
 section#index .keys :nth-child(7) img {
-  -webkit-animation: key1 9s infinite 9s;
-          animation: key1 9s infinite 9s;
+  -webkit-animation: key1 9s infinite 8s;
+          animation: key1 9s infinite 8s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 11s infinite 8.25s;
-          animation: key1 11s infinite 8.25s;
+  -webkit-animation: key1 7s infinite 8.25s;
+          animation: key1 7s infinite 8.25s;
 }
 
 section#index .keys :nth-child(8) img {
-  -webkit-animation: key1 8s infinite 9s;
-          animation: key1 8s infinite 9s;
+  -webkit-animation: key1 8s infinite 10s;
+          animation: key1 8s infinite 10s;
 }
 
 section#index .keys :nth-child(9) img {
@@ -439,13 +439,13 @@ section#index .keys :nth-child(9) img {
 }
 
 section#index .keys :nth-child(9) img {
-  -webkit-animation: key1 11s infinite 9.5s;
-          animation: key1 11s infinite 9.5s;
+  -webkit-animation: key1 10s infinite 10.5s;
+          animation: key1 10s infinite 10.5s;
 }
 
 section#index .keys :nth-child(10) img {
-  -webkit-animation: key1 9s infinite 10.5s;
-          animation: key1 9s infinite 10.5s;
+  -webkit-animation: key1 10s infinite 11s;
+          animation: key1 10s infinite 11s;
 }
 
 section#index .keys :nth-child(10) img {
@@ -521,8 +521,7 @@ section#works .work {
   z-index: 17;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 33.33333%;
-  height: 33.33333%;
+  width: 33.3333%;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -694,8 +693,23 @@ footer#footer .logo {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .modal .modal_main_body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .modal .modal_main_body_img {
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .modal .modal_main_body_img {
+    width: 100%;
+  }
 }
 
 .modal .modal_main_body_img img {
@@ -709,6 +723,14 @@ footer#footer .logo {
   width: 30%;
   padding: 2rem;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .modal .modal_main_body_texts {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .modal .modal_main_body_texts p {
@@ -818,5 +840,357 @@ footer#footer .logo {
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(149, 141, 170, 0.8);
+}
+
+.modal.about .modal_main_body {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #DEDDE5;
+}
+
+.modal.about .modal_main_body ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0px;
+}
+
+.modal.about .modal_main_body li {
+  font-size: 14px;
+  line-height: 23px;
+  font-weight: 200;
+}
+
+.modal.about .modal_main_body h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.modal.about .modal_main_body h1 span {
+  font-size: 14px;
+}
+
+.modal.about .modal_main_body h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.modal.about .modal_main_body h3 {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.7;
+}
+
+.modal.about .modal_main_body h4 {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal.about .modal_main_body hr {
+  border: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.modal.about .modal_main_body i {
+  width: 16px;
+  text-align: center;
+  margin-right: 15px;
+  padding-right: 15px;
+  color: #fff;
+  border-right: solid 1px rgba(255, 255, 255, 0.6);
+}
+
+.modal.about .modal_main_body .block {
+  margin-top: 35px;
+}
+
+.modal.about .modal_main_body .blocktop {
+  margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .blocktop {
+    margin-top: 35px;
+  }
+}
+
+.modal.about .modal_main_body .resume {
+  width: 100%;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 1px;
+  padding: 3rem 5rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume {
+    padding: 3rem;
+  }
+}
+
+.modal.about .modal_main_body .resume .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.modal.about .modal_main_body .resume .information .icon {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .information .icon {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 0px;
+  }
+}
+
+.modal.about .modal_main_body .resume .information .icon img {
+  width: 180px;
+  border-radius: 50%;
+  position: relative;
+  top: 4px;
+}
+
+.modal.about .modal_main_body .resume .information .texts {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .information .texts {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 0px;
+  }
+}
+
+.modal.about .modal_main_body .resume .main {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.modal.about .modal_main_body .resume .main .skill {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  padding-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .main .skill {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-right: 0px;
+  }
+}
+
+.modal.about .modal_main_body .resume .main .experience {
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .modal.about .modal_main_body .resume .main .experience {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-left: 0px;
+  }
+}
+
+.modal.about .modal_main_body .resume .name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 2.5px;
+}
+
+.modal.about .modal_main_body .resume .workExperience > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal.about .modal_main_body .resume .workExperience ul {
+  margin-top: 0px;
+  padding-left: 15px;
+  margin-left: 15px;
+  border-left: solid 1px rgba(149, 141, 170, 0.7);
+}
+
+.modal.about .modal_main_body .resume .year {
+  text-align: center;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.modal.about .modal_main_body .resume .year ul {
+  text-align: left;
+}
+
+.modal.about .modal_main_body .resume .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal.about .modal_main_body .resume .skills li {
+  padding: .5rem;
+}
+
+.modal.about .modal_main_body .resume .cir {
+  width: 60px;
+  height: 60px;
+  background-color: #DEDDE5;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.modal.about .modal_main_body .resume .cir:after {
+  content: "";
+  display: block;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  background-color: #4c455e;
+  position: relative;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal.about .modal_main_body .resume .p360, .modal.about .modal_main_body .resume .p270, .modal.about .modal_main_body .resume .p180, .modal.about .modal_main_body .resume .p90 {
+  width: 50%;
+  height: 50%;
+  background-color: #958DAA;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.modal.about .modal_main_body .resume .p360 {
+  top: 0;
+  left: 0;
+}
+
+.modal.about .modal_main_body .resume .p270 {
+  top: 50%;
+  left: 0;
+}
+
+.modal.about .modal_main_body .resume .p180 {
+  top: 50%;
+}
+
+.modal.about .modal_main_body .resume .bar {
+  width: 100%;
+  height: 15px;
+  background-color: #DEDDE5;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.modal.about .modal_main_body .resume .bar .value {
+  width: 50%;
+  height: 100%;
+  background-color: #958DAA;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p10 {
+  width: 10%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p20 {
+  width: 20%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p30 {
+  width: 30%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p40 {
+  width: 40%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p50 {
+  width: 50%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p60 {
+  width: 60%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p70 {
+  width: 70%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p80 {
+  width: 80%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p90 {
+  width: 90%;
+}
+
+.modal.about .modal_main_body .resume .bar .value.p100 {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

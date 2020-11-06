@@ -314,7 +314,7 @@ section#works
     .work
         z-index: 17
         box-sizing: border-box
-        +size(33.333333%)
+        width: 33.3333%
         overflow: hidden
         padding: 0
         position: relative
@@ -423,8 +423,13 @@ footer#footer
             background-color: rgba($grey_4,0.5)
             display: flex
             position: relative
+
+            @include mobile
+                flex-direction: column
             &_img
                 width: 70%
+                @include mobile
+                    width: 100%
                 img
                     max-width: 1000px
                     width: 100%
@@ -435,6 +440,9 @@ footer#footer
                 width: 30%
                 padding: 2rem
                 color: $white
+                @include mobile
+                    width: 100%
+                    box-sizing: border-box
                 p
                     font-weight: 300
 
@@ -501,3 +509,217 @@ footer#footer
 
 ::-webkit-scrollbar-thumb 
     background-color: rgba($purple_3,0.8)
+
+
+
+// about
+
+.modal.about
+    .modal_main_body
+        display: block
+        justify-content: center
+        color: $purple_1
+        ul
+            list-style: none
+            padding-left: 0
+            margin: 12px 0px
+        li
+            font-size: 14px
+            line-height: 23px
+            font-weight: 200
+        h1
+            font-size: 24px  
+            margin-bottom: 8px
+            color: $white
+            span
+                font-size: 14px
+        h2
+            margin: 0
+            font-size: 20px
+            color: $white
+        h3
+            font-size: 14px
+            margin: 0
+            opacity: 0.7
+        h4
+            margin: 0
+            font-size: 12px
+            color: rgba($white,0.6)
+        hr
+            border: 0
+            height: 1px
+            background-color: rgba($white,0.6)
+        i
+            width: 16px
+            text-align: center
+            margin-right: 15px
+            padding-right: 15px
+            color: $white
+            border-right: solid 1px rgba($white,0.6)
+
+        .block
+            margin-top: 35px
+        .blocktop 
+            margin-top: 0px
+            @include mobile
+                margin-top: 35px
+
+        .resume
+            width: 100%
+            max-width: 800px
+            display: flex
+            flex-direction: column
+            box-sizing: border-box
+            letter-spacing: 1px
+            padding: 3rem 5rem 
+            position: relative
+            margin-left: auto
+            margin-right: auto
+
+            @include mobile
+                padding: 3rem
+
+            .information
+                display: flex
+                margin-bottom: 40px
+                @include mobile
+                    flex-direction: column
+                .icon
+                    flex: 4
+                    padding-left: 30px
+                    @include mobile
+                        flex: 1
+                        padding-left: 0px
+                    img
+                        width: 180px
+                        border-radius: 50%
+                        position: relative
+                        top: 4px
+                    
+                .texts  
+                    flex: 6
+                    padding-left: 30px
+                    padding-top: 20px
+                    @include mobile
+                        flex: 1
+                        padding-left: 0px
+                
+
+            .main
+                flex: 8
+                display: flex
+
+                @include mobile
+                    flex-direction: column
+
+                .skill
+                    flex: 4
+                    padding-right: 30px
+                    @include mobile
+                        flex: 1
+                        padding-right: 0px
+
+                .experience
+                    flex: 6
+                    padding-left: 30px
+                    @include mobile
+                        flex: 1
+                        padding-left: 0px
+                    
+            .name
+                color: $white
+                font-size: 16px
+                font-weight: 600
+                padding-bottom: 2.5px
+                
+            .workExperience>li
+                display: flex
+            .workExperience 
+                ul
+                    margin-top: 0px
+                    padding-left: 15px
+                    margin-left: 15px
+                    border-left: solid 1px rgba($purple_3,0.7)
+
+                
+            .year
+                text-align: center
+                margin-right: 0px
+                padding-right: 0px
+                ul
+                    text-align: left
+                
+            .skills
+                display: flex
+                flex-wrap: wrap
+                
+                li
+                    padding: .5rem
+                
+            .cir
+                width: 60px
+                height: 60px
+                background-color: $purple_1
+                border-radius: 50%
+                position: relative
+                overflow: hidden
+                margin-top: 5px
+                &:after
+                    content: ""
+                    display: block
+                    width: calc(100% - 30px)
+                    height: calc(100% - 30px)
+                    background-color: rgba($purple_5,1)
+                    position: relative
+                    border-radius: 50%
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%,-50%)
+            .p360,.p270,.p180,.p90
+                width: 50%
+                height: 50%
+                background-color: $purple_3
+                position: absolute
+                top: 0
+                left: 50%
+            .p360
+                top: 0
+                left: 0
+            .p270
+                top: 50%
+                left: 0
+            .p180
+                top: 50%
+                
+            .bar 
+                width: 100%
+                height: 15px
+                background-color: $purple_1
+                margin-bottom: 10px
+                border-radius: 5px
+                overflow: hidden
+                .value
+                    width: 50%
+                    height: 100%
+                    background-color: $purple_3
+                    
+                .value.p10
+                    width: 10%
+                .value.p20
+                    width: 20%
+                .value.p30
+                    width: 30%
+                .value.p40
+                    width: 40%
+                .value.p50
+                    width: 50%
+                .value.p60
+                    width: 60%
+                .value.p70
+                    width: 70%
+                .value.p80
+                    width: 80%
+                .value.p90
+                    width: 90%
+                .value.p100
+                    width: 100%
