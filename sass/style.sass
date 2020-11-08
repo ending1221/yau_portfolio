@@ -269,8 +269,12 @@ section#index
             overflow: hidden
             white-space: nowrap
             position: relative
+            @include mobile
+                width: 10vw
             img
                 width: 80px
+                @include mobile
+                    width: 10vw
                 vertical-align: bottom
                 display: inline-block
                 position: relative
@@ -281,6 +285,8 @@ section#index
                 @for $j from 1 through 2
                     img
                         animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+                        @include mobile
+                            animation: key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
 
 @keyframes key1
     0%
@@ -293,6 +299,19 @@ section#index
         left: 0px
     100%
         left: 0px
+
+@keyframes key2
+    0%
+        left: 0px
+    3%
+        left: -10.5vw
+    70%
+        left: -10.5vw
+    73%
+        left: 0px
+    100%
+        left: 0px
+
 
 section#hi
     +size(100%)
@@ -542,7 +561,7 @@ footer#footer
             margin: 0
             opacity: 0.7
         h4
-            margin: 0
+            margin: 0 0 .15rem 0
             font-size: 12px
             color: rgba($white,0.6)
         hr
@@ -575,6 +594,9 @@ footer#footer
             position: relative
             margin-left: auto
             margin-right: auto
+
+            *
+                font-family: '微軟正黑體'
 
             @include mobile
                 padding: 3rem
