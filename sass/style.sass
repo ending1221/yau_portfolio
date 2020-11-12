@@ -12,6 +12,7 @@ $grey_2: #7D7D7D
 $grey_3: #595663
 $grey_4: #25232B
 $grey_5: #171224
+$modalBackground: #2D2B36
 
 =mobile
     @media(max-width: 768px)
@@ -440,7 +441,7 @@ footer#footer
             width: 100%
             height: 70vh
             overflow-y: auto
-            background-color: rgba($grey_4,0.5)
+            background-color: $modalBackground
             display: flex
             position: relative
 
@@ -514,12 +515,13 @@ footer#footer
 
 .modal.show
     visibility: visible
-    transition-delay: .3s
-
     .modal_main
         transform: translate(0,0)
         opacity: 1
 
+
+// :-webkit-scrollbar
+    
 ::-webkit-scrollbar 
     background-color: rgba($grey_4,0.8)
     color: rgba($purple_2,0.5)
@@ -692,7 +694,7 @@ footer#footer
                     display: block
                     width: calc(100% - 30px)
                     height: calc(100% - 30px)
-                    background-color: rgba($purple_5,1)
+                    background-color: $modalBackground
                     position: relative
                     border-radius: 50%
                     left: 50%
