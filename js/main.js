@@ -304,3 +304,14 @@ $('.navbar-nav .nav-item').click(function(e){
     $('.navbar-menu').removeClass('open');
     $('.navbar').removeClass('open');
 })
+
+$('#toggle-theme').click(function() {
+    console.log("Switching theme");
+    if (document.documentElement.hasAttribute('theme')) {
+        document.documentElement.removeAttribute('theme');
+    }
+    else {
+        document.documentElement.setAttribute('theme', 'dark');
+    }
+    console.log(document.documentElement.hasAttribute('theme'));
+})
