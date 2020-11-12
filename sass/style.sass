@@ -393,6 +393,7 @@ footer#footer
     +flexcenter
     outline: 0
     background-color: rgba(34, 36, 38, 0.8)
+    opacity: 0
     transition: .25s ease-in-out
 
     .modal_main
@@ -515,13 +516,14 @@ footer#footer
 
 .modal.show
     visibility: visible
+    opacity: 1 !important
     .modal_main
         transform: translate(0,0)
         opacity: 1
 
 
 // :-webkit-scrollbar
-    
+
 ::-webkit-scrollbar 
     background-color: rgba($grey_4,0.8)
     color: rgba($purple_2,0.5)
