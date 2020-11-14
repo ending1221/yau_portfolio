@@ -55,6 +55,7 @@ body,html
 
 p
     font-weight: var(--textWeight)
+    letter-spacing: var(--letterSpeacing)
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
     margin-top: .5rem
@@ -339,7 +340,7 @@ section#hi
         font-size: 22px
 
 section#works
-    background-color: var(--grey_1)
+    background-color: var(--workBackground)
     padding: 0px
     display: flex
     flex-wrap: wrap
@@ -374,6 +375,7 @@ section#works
             width: 100%
             height: 100%
             object-fit: cover
+            opacity: var(--workOpacity)
 
         .text
             font-size: 15px
@@ -387,7 +389,7 @@ section#works
 
 footer#footer
     +size(100%)
-    background-color: var(--purple_3)
+    background-color: var(--footerBackground)
     position: relative
     padding: 60px 0
     +flexcenter
