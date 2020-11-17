@@ -90,11 +90,11 @@ class Modal {
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
         const html = `
-            <div class="modal_main_body_img">
-                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
-            </div>
             <div class="modal_main_body_texts">
                 <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
+            </div>
+            <div class="modal_main_body_img">
+                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
             </div>`;
         this.$title.text(data.name);
         this.$body.html(html)
@@ -303,4 +303,17 @@ $('.navbar-nav .nav-item').click(function(e){
     }
     $('.navbar-menu').removeClass('open');
     $('.navbar').removeClass('open');
+})
+
+$('#toggle-theme').click(function() {
+    console.log("Switching theme");
+    if (document.documentElement.hasAttribute('theme')) {
+        document.documentElement.removeAttribute('theme');
+        $('.themeIcon .fas').removeClass('fa-sun').addClass('fa-moon');
+    }
+    else {
+        document.documentElement.setAttribute('theme', 'dark');
+        $('.themeIcon .fas').removeClass('fa-moon').addClass('fa-sun');
+    }
+    console.log(document.documentElement.hasAttribute('theme'));
 })

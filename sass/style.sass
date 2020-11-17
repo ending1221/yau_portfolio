@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo&display=swap')
-
-$purple_1: #DEDDE5
-$purple_2: #C3BECF
-$purple_3: #958DAA
-$purple_4: #645882
-$purple_5: #4C455E
-$white: #fff
-$white_1: #F5F5F5
-$grey_1: #DEDDE5
-$grey_2: #7D7D7D
-$grey_3: #595663
-$grey_4: #25232B
-$grey_5: #171224
-$modalBackground: #2D2B36
+@import '../css/theme.css'
 
 =mobile
     @media(max-width: 768px)
@@ -42,14 +29,16 @@ $modalBackground: #2D2B36
     left: 50%
     transform: translateX(-50%)
 
-*
-    font-family: 'Chivo','微軟正黑體'
 
 body,html
     margin: 0
     padding: 0
-    color: $grey_2
+    color: var(--normalText)
     position: relative
+
+p
+    font-weight: var(--textWeight)
+    letter-spacing: var(--letterSpeacing)
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
     margin-top: .5rem
@@ -59,6 +48,8 @@ body,html
 
 section
     padding: 60px 0
+    *
+        font-family: '微軟正黑體'
 
 header.navbar
     position: fixed
@@ -79,35 +70,67 @@ header.navbar
         width: 30px
         margin: 20px
 
-    *
-        text-decoration: none
+    #toggle-theme
+        background-color: transparent
+        outline: none
+        border: none
+        box-shadow: none
+        margin: 1rem
+        cursor: pointer
+        transition: 0.5s
+
+        &:hover
+            opacity: 0.6
+
+        +mobile
+            position: absolute
+            top: 1.75rem
+            right: 6rem
+
+        .themeIcon
+            +size(1rem)
+            padding: .25rem
+            background-color: var(--purple_1)
+            border: transparent 1px solid
+            border-radius: 100%
+            position: relative
+            +flexcenter
+            font-size: 1.25rem
+            
+            i
+                color: var(--purple_5)
 
     .navbar-nav
         padding: 0
         margin: 0
-        margin-right: 2rem
+        margin-right: 2.5rem
         display: flex
         flex-wrap: nowrap
         transition: 0.5s
+        border-bottom: solid 1px var(--purple_3)
 
-        @include mobile
+        *
+            text-decoration: none
+            list-style: none
+
+        +mobile
             display: none
             overflow: hidden
             transition-delay: .5s
 
         .nav-item
-            list-style: none
             margin: 1.5rem
             border-bottom: solid 1px transparent
+            font-family: 'Chivo','微軟正黑體'
             &:hover
-                border-bottom: solid 1px $purple_3
+                border-bottom: solid 1px var(--purple_3)
                 .nav-link
-                    color: $purple_3
+                    color: var(--purple_3)
                     cursor: pointer
 
             .nav-link
                 transition: 0.5s
-                color: $purple_1
+                color: var(--purple_1)
                 padding: 0px
                 text-decoration: none
 
@@ -131,10 +154,10 @@ header.navbar
         z-index: 999
         &:hover
             span
-                background: $purple_1
+                background: var(--purple_1)
                 transition-delay: 0s
 
-        @include mobile
+        +mobile
             display: flex
 
         *
@@ -209,7 +232,7 @@ header.navbar
                     transition-delay: .375s
 
 .navbar.open
-    background-color: rgba($purple_4, 0.8)
+    background-color: rgba(var(--purple_4), 0.8)
     flex-wrap: wrap
     .navbar-nav
         display: block
@@ -221,24 +244,24 @@ header.navbar
             width: 100%
             text-align: center
             margin: 0
-            background-color: rgba($purple_4, 0.8)
+            background-color: rgba(var(--purple_4), 0.8)
             border-top: rgba(#fff,0.6) solid 1px
             border-bottom: solid 1px transparent
             transition: 0.5s
             &:hover
-                background-color: rgba($purple_5, 0.8)
+                background-color: rgba(var(--purple_5), 0.8)
             .nav-link
                 display: block
                 padding: 1rem .5rem
 
 section#index
-    // background-color: $purple_5
+    background-color: var(--purple_5)
     padding: 240px 0px
     +flexcenter
     flex-direction: column
     position: relative
     .text
-        color: $white
+        color: var(--white)
         padding: 20px
         font-size: 16px
         letter-spacing: 2px
@@ -252,12 +275,12 @@ section#index
         text-decoration: none
         +size(20px)
         border-radius: 50%
-        background-color: $grey_4
+        background-color: var(--grey_4)
         &:before
             content: ""
             display: block
             +size(10px,15px)
-            background-color: $grey_4
+            background-color: var(--grey_4)
             +xcenter
             bottom: -10px
         &:hover
@@ -270,11 +293,11 @@ section#index
             overflow: hidden
             white-space: nowrap
             position: relative
-            @include mobile
+            +mobile
                 width: 10vw
             img
                 width: 80px
-                @include mobile
+                +mobile
                     width: 10vw
                 vertical-align: bottom
                 display: inline-block
@@ -286,7 +309,7 @@ section#index
                 @for $j from 1 through 2
                     img
                         animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
-                        @include mobile
+                        +mobile
                             animation: key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
 
 @keyframes key1
@@ -319,15 +342,16 @@ section#hi
     padding: 70px
     text-align: center
     box-sizing: border-box
+    background-color: var(--sectionBackground)
     h2
-        color: $purple_3
+        color: var(--purple_3)
         font-size: 30px
     p
         margin: 0
         font-size: 22px
 
 section#works
-    background-color: $grey_1
+    background-color: var(--workBackground)
     padding: 0px
     display: flex
     flex-wrap: wrap
@@ -340,9 +364,9 @@ section#works
         padding: 0
         position: relative
         cursor: pointer
-        @include min1400
+        +min1400
             +size(25%, auto)
-        @include mobile
+        +mobile
             +size(100%,auto)
         &:hover
             .text,.workbox
@@ -362,6 +386,7 @@ section#works
             width: 100%
             height: 100%
             object-fit: cover
+            opacity: var(--workOpacity)
 
         .text
             font-size: 15px
@@ -369,13 +394,13 @@ section#works
             +xycenter
             z-index: 5
             opacity: 0
-            color: $white
+            color: var(--white)
             transition: 0.5s
             text-align: center
 
 footer#footer
     +size(100%)
-    background-color: $purple_3
+    background-color: var(--footerBackground)
     position: relative
     padding: 60px 0
     +flexcenter
@@ -405,7 +430,7 @@ footer#footer
             border-radius: .5rem
             top: .25rem
             left: -.5rem
-            border: 1px solid $purple_1
+            border: 1px solid var(--purple_1)
 
     .modal_main
         transform: translate(0,-10rem)
@@ -414,7 +439,7 @@ footer#footer
 
         +size(80vw, auto)
         max-width: 1400px
-        background-color: $purple_5
+        background-color: var(--purple_5)
         box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px
         border-radius: .5rem
         position: relative
@@ -424,14 +449,14 @@ footer#footer
             position: relative
             font-size: 1.5rem
             letter-spacing: 1px
-            color: $white
+            color: var(--white)
 
             .close
                 background-color: transparent
                 border: none
                 padding: 0 .25rem
                 float: right
-                color: $white
+                color: var(--white)
                 opacity: .5
                 cursor: pointer
                 font-size: 2rem
@@ -442,15 +467,16 @@ footer#footer
             width: 100%
             height: 70vh
             overflow-y: auto
-            background-color: $modalBackground
+            background-color: var(--modalBackground)
             display: flex
             position: relative
+            flex-direction: row-reverse
 
-            @include mobile
+            +mobile
                 flex-direction: column
             &_img
                 width: 70%
-                @include mobile
+                +mobile
                     width: 100%
                 img
                     max-width: 1000px
@@ -461,8 +487,8 @@ footer#footer
             &_texts
                 width: 30%
                 padding: 2rem
-                color: $white
-                @include mobile
+                color: var(--white)
+                +mobile
                     width: 100%
                     box-sizing: border-box
                 p
@@ -474,13 +500,13 @@ footer#footer
                 border-radius: .25rem
                 text-decoration: none
                 font-size: 1rem
-                border: $purple_1 solid .15rem
+                border: var(--purple_1) solid .15rem
                 outline: none
-                color: $white
+                color: var(--white)
                 transition: 0.5s
                 display: flex
                 &:hover
-                    background-color: rgba($purple_1,0.1)
+                    background-color: rgba(var(--purple_1),0.1)
 
                     
                 @keyframes arrow
@@ -525,14 +551,14 @@ footer#footer
 // :-webkit-scrollbar
 
 ::-webkit-scrollbar 
-    background-color: rgba($grey_4,0.8)
-    color: rgba($purple_2,0.5)
+    background-color: var(--grey_4)
+    color: var(--purple_2)
 
 ::-webkit-scrollbar-corner 
-    background-color: rgba($grey_4,0.8)
+    background-color: var(--grey_4)
 
 ::-webkit-scrollbar-thumb 
-    background-color: rgba($purple_3,0.8)
+    background-color: var(--purple_3)
 
 
 
@@ -542,7 +568,7 @@ footer#footer
     .modal_main_body
         display: block
         justify-content: center
-        color: $purple_1
+        color: var(--purple_1)
         ul
             list-style: none
             padding-left: 0
@@ -554,13 +580,13 @@ footer#footer
         h1
             font-size: 24px  
             margin-bottom: 8px
-            color: $white
+            color: var(--white)
             span
                 font-size: 14px
         h2
             margin: 0
             font-size: 20px
-            color: $white
+            color: var(--white)
         h3
             font-size: 14px
             margin: 0
@@ -568,24 +594,24 @@ footer#footer
         h4
             margin: 0 0 .15rem 0
             font-size: 12px
-            color: rgba($white,0.6)
+            color: rgba(var(--white), 0.6)
         hr
             border: 0
             height: 1px
-            background-color: rgba($white,0.6)
+            background-color: rgba(var(--white), 0.6)
         i
             width: 16px
             text-align: center
             margin-right: 15px
             padding-right: 15px
-            color: $white
-            border-right: solid 1px rgba($white,0.6)
+            color: var(--white)
+            border-right: solid 1px rgba(var(--white), 0.6)
 
         .block
             margin-top: 35px
         .blocktop 
             margin-top: 0px
-            @include mobile
+            +mobile
                 margin-top: 35px
 
         .resume
@@ -600,21 +626,18 @@ footer#footer
             margin-left: auto
             margin-right: auto
 
-            *
-                font-family: '微軟正黑體'
-
-            @include mobile
+            +mobile
                 padding: 3rem
 
             .information
                 display: flex
                 margin-bottom: 40px
-                @include mobile
+                +mobile
                     flex-direction: column
                 .icon
                     flex: 4
                     padding-left: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                     img
@@ -627,7 +650,7 @@ footer#footer
                     flex: 6
                     padding-left: 30px
                     padding-top: 20px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                 
@@ -636,25 +659,25 @@ footer#footer
                 flex: 8
                 display: flex
 
-                @include mobile
+                +mobile
                     flex-direction: column
 
                 .skill
                     flex: 4
                     padding-right: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-right: 0px
 
                 .experience
                     flex: 6
                     padding-left: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                     
             .name
-                color: $white
+                color: var(--white)
                 font-size: 16px
                 font-weight: 600
                 padding-bottom: 2.5px
@@ -666,7 +689,7 @@ footer#footer
                     margin-top: 0px
                     padding-left: 15px
                     margin-left: 15px
-                    border-left: solid 1px rgba($purple_3,0.7)
+                    border-left: solid 1px rgba(var(--purple_3), 0.7)
 
                 
             .year
@@ -686,7 +709,7 @@ footer#footer
             .cir
                 width: 60px
                 height: 60px
-                background-color: $purple_1
+                background-color: var(--purple_1)
                 border-radius: 50%
                 position: relative
                 overflow: hidden
@@ -696,7 +719,7 @@ footer#footer
                     display: block
                     width: calc(100% - 30px)
                     height: calc(100% - 30px)
-                    background-color: $modalBackground
+                    background-color: var(--modalBackground)
                     position: relative
                     border-radius: 50%
                     left: 50%
@@ -705,7 +728,7 @@ footer#footer
             .p360,.p270,.p180,.p90
                 width: 50%
                 height: 50%
-                background-color: $purple_3
+                background-color: var(--purple_3)
                 position: absolute
                 top: 0
                 left: 50%
@@ -721,14 +744,14 @@ footer#footer
             .bar 
                 width: 100%
                 height: 15px
-                background-color: $purple_1
+                background-color: var(--purple_1)
                 margin-bottom: 10px
                 border-radius: 5px
                 overflow: hidden
                 .value
                     width: 50%
                     height: 100%
-                    background-color: $purple_3
+                    background-color: var(--purple_3)
                     
                 .value.p10
                     width: 10%
