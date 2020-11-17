@@ -29,8 +29,6 @@
     left: 50%
     transform: translateX(-50%)
 
-*
-    font-family: '微軟正黑體'
 
 body,html
     margin: 0
@@ -50,6 +48,8 @@ p
 
 section
     padding: 60px 0
+    *
+        font-family: '微軟正黑體'
 
 header.navbar
     position: fixed
@@ -71,31 +71,57 @@ header.navbar
         margin: 20px
 
     #toggle-theme
-        position: absolute
-        right: 2rem
-        bottom: 2rem
+        background-color: transparent
+        outline: none
+        border: none
+        box-shadow: none
+        margin: 1rem
+        cursor: pointer
+        transition: 0.5s
 
-    *
-        text-decoration: none
-        font-family: 'Chivo','微軟正黑體'
+        &:hover
+            opacity: 0.6
+
+        +mobile
+            position: absolute
+            top: 1.75rem
+            right: 6rem
+
+        .themeIcon
+            +size(1rem)
+            padding: .25rem
+            background-color: var(--purple_1)
+            border: transparent 1px solid
+            border-radius: 100%
+            position: relative
+            +flexcenter
+            font-size: 1.25rem
+            
+            i
+                color: var(--purple_5)
 
     .navbar-nav
         padding: 0
         margin: 0
-        margin-right: 2rem
+        margin-right: 2.5rem
         display: flex
         flex-wrap: nowrap
         transition: 0.5s
+        border-bottom: solid 1px var(--purple_3)
 
-        @include mobile
+        *
+            text-decoration: none
+            list-style: none
+
+        +mobile
             display: none
             overflow: hidden
             transition-delay: .5s
 
         .nav-item
-            list-style: none
             margin: 1.5rem
             border-bottom: solid 1px transparent
+            font-family: 'Chivo','微軟正黑體'
             &:hover
                 border-bottom: solid 1px var(--purple_3)
                 .nav-link
@@ -131,7 +157,7 @@ header.navbar
                 background: var(--purple_1)
                 transition-delay: 0s
 
-        @include mobile
+        +mobile
             display: flex
 
         *
@@ -267,11 +293,11 @@ section#index
             overflow: hidden
             white-space: nowrap
             position: relative
-            @include mobile
+            +mobile
                 width: 10vw
             img
                 width: 80px
-                @include mobile
+                +mobile
                     width: 10vw
                 vertical-align: bottom
                 display: inline-block
@@ -283,7 +309,7 @@ section#index
                 @for $j from 1 through 2
                     img
                         animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
-                        @include mobile
+                        +mobile
                             animation: key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
 
 @keyframes key1
@@ -338,9 +364,9 @@ section#works
         padding: 0
         position: relative
         cursor: pointer
-        @include min1400
+        +min1400
             +size(25%, auto)
-        @include mobile
+        +mobile
             +size(100%,auto)
         &:hover
             .text,.workbox
@@ -446,11 +472,11 @@ footer#footer
             position: relative
             flex-direction: row-reverse
 
-            @include mobile
+            +mobile
                 flex-direction: column
             &_img
                 width: 70%
-                @include mobile
+                +mobile
                     width: 100%
                 img
                     max-width: 1000px
@@ -462,7 +488,7 @@ footer#footer
                 width: 30%
                 padding: 2rem
                 color: var(--white)
-                @include mobile
+                +mobile
                     width: 100%
                     box-sizing: border-box
                 p
@@ -585,7 +611,7 @@ footer#footer
             margin-top: 35px
         .blocktop 
             margin-top: 0px
-            @include mobile
+            +mobile
                 margin-top: 35px
 
         .resume
@@ -600,18 +626,18 @@ footer#footer
             margin-left: auto
             margin-right: auto
 
-            @include mobile
+            +mobile
                 padding: 3rem
 
             .information
                 display: flex
                 margin-bottom: 40px
-                @include mobile
+                +mobile
                     flex-direction: column
                 .icon
                     flex: 4
                     padding-left: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                     img
@@ -624,7 +650,7 @@ footer#footer
                     flex: 6
                     padding-left: 30px
                     padding-top: 20px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                 
@@ -633,20 +659,20 @@ footer#footer
                 flex: 8
                 display: flex
 
-                @include mobile
+                +mobile
                     flex-direction: column
 
                 .skill
                     flex: 4
                     padding-right: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-right: 0px
 
                 .experience
                     flex: 6
                     padding-left: 30px
-                    @include mobile
+                    +mobile
                         flex: 1
                         padding-left: 0px
                     

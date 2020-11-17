@@ -309,9 +309,11 @@ $('#toggle-theme').click(function() {
     console.log("Switching theme");
     if (document.documentElement.hasAttribute('theme')) {
         document.documentElement.removeAttribute('theme');
+        $('.themeIcon .fas').removeClass('fa-sun').addClass('fa-moon');
     }
     else {
         document.documentElement.setAttribute('theme', 'dark');
+        $('.themeIcon .fas').removeClass('fa-moon').addClass('fa-sun');
     }
     console.log(document.documentElement.hasAttribute('theme'));
 })
