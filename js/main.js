@@ -90,11 +90,11 @@ class Modal {
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
         const html = `
-            <div class="modal_main_body_img">
-                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
-            </div>
             <div class="modal_main_body_texts">
                 <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
+            </div>
+            <div class="modal_main_body_img">
+                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
             </div>`;
         this.$title.text(data.name);
         this.$body.html(html)

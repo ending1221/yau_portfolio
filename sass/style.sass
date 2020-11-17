@@ -1,21 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo&display=swap')
 @import '../css/theme.css'
 
-$purple_1: #DEDDE5
-$purple_2: #C3BECF
-$purple_3: #958DAA
-$purple_4: #645882
-$purple_5: #4C455E
-$white: #fff
-$white_1: #F5F5F5
-$grey_1: #DEDDE5
-$grey_2: #7D7D7D
-$grey_3: #595663
-$grey_4: #25232B
-$grey_5: #171224
-$modalBackground: #2D2B36
-
-
 =mobile
     @media(max-width: 768px)
         @content
@@ -112,14 +97,14 @@ header.navbar
             margin: 1.5rem
             border-bottom: solid 1px transparent
             &:hover
-                border-bottom: solid 1px $purple_3
+                border-bottom: solid 1px var(--purple_3)
                 .nav-link
-                    color: $purple_3
+                    color: var(--purple_3)
                     cursor: pointer
 
             .nav-link
                 transition: 0.5s
-                color: $purple_1
+                color: var(--purple_1)
                 padding: 0px
                 text-decoration: none
 
@@ -143,7 +128,7 @@ header.navbar
         z-index: 999
         &:hover
             span
-                background: $purple_1
+                background: var(--purple_1)
                 transition-delay: 0s
 
         @include mobile
@@ -221,7 +206,7 @@ header.navbar
                     transition-delay: .375s
 
 .navbar.open
-    background-color: rgba($purple_4, 0.8)
+    background-color: rgba(var(--purple_4), 0.8)
     flex-wrap: wrap
     .navbar-nav
         display: block
@@ -233,12 +218,12 @@ header.navbar
             width: 100%
             text-align: center
             margin: 0
-            background-color: rgba($purple_4, 0.8)
+            background-color: rgba(var(--purple_4), 0.8)
             border-top: rgba(#fff,0.6) solid 1px
             border-bottom: solid 1px transparent
             transition: 0.5s
             &:hover
-                background-color: rgba($purple_5, 0.8)
+                background-color: rgba(var(--purple_5), 0.8)
             .nav-link
                 display: block
                 padding: 1rem .5rem
@@ -459,6 +444,7 @@ footer#footer
             background-color: var(--modalBackground)
             display: flex
             position: relative
+            flex-direction: row-reverse
 
             @include mobile
                 flex-direction: column
