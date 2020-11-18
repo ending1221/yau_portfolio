@@ -306,14 +306,17 @@ $('.navbar-nav .nav-item').click(function(e){
 })
 
 $('#toggle-theme').click(function() {
+    const $icon = $('.themeIcon .fas')
     console.log("Switching theme");
     if (document.documentElement.hasAttribute('theme')) {
         document.documentElement.removeAttribute('theme');
-        $('.themeIcon .fas').removeClass('fa-sun').addClass('fa-moon');
+        $icon.removeClass('fa-sun').addClass('fa-moon');
+        $icon.attr('title','切換為夜間模式');
     }
     else {
         document.documentElement.setAttribute('theme', 'dark');
-        $('.themeIcon .fas').removeClass('fa-moon').addClass('fa-sun');
+        $icon.removeClass('fa-moon').addClass('fa-sun');
+        $icon.attr('title','切換為普通模式');
     }
     console.log(document.documentElement.hasAttribute('theme'));
 })
