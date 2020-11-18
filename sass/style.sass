@@ -107,8 +107,7 @@ header.navbar
         display: flex
         flex-wrap: nowrap
         transition: 0.5s
-        border-bottom: solid 1px var(--purple_3)
-
+        
         *
             text-decoration: none
             list-style: none
@@ -117,6 +116,7 @@ header.navbar
             display: none
             overflow: hidden
             transition-delay: .5s
+            border-bottom: solid 1px var(--purple_3)
 
         .nav-item
             margin: 1.5rem
@@ -420,6 +420,8 @@ footer#footer
     background-color: rgba(34, 36, 38, 0.8)
     opacity: 0
     transition: .25s ease-in-out
+    *
+        font-family: '微軟正黑體'
 
     .modal_main
         &::before
@@ -464,7 +466,7 @@ footer#footer
                     opacity: 1
 
         &_body
-            width: 100%
+            width: 99%
             height: 70vh
             overflow-y: auto
             background-color: var(--modalBackground)
@@ -473,6 +475,8 @@ footer#footer
             flex-direction: row-reverse
 
             +mobile
+                width: 98%
+                height: 65vh
                 flex-direction: column
             &_img
                 width: 70%
@@ -506,7 +510,7 @@ footer#footer
                 transition: 0.5s
                 display: flex
                 &:hover
-                    background-color: rgba(var(--purple_1),0.1)
+                    background-color: var(--purple_5)
 
                     
                 @keyframes arrow
