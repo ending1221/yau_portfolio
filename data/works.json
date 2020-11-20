@@ -63,13 +63,6 @@
         "text": "In the catching game, players can use the left and right arrow keys to play the game."
     },
     {
-        "img": "img/piano.jpg",
-        "url": "https://codepen.io/Yau1221/full/KKwqeBo",
-        "name": "Vue.js Piano",
-        "language": "HTML / SASS / Vue.js",
-        "text": "Sample works created following the web course."
-    },
-    {
         "img": "img/toemomo_character.jpg",
         "url": "https://codepen.io/Yau1221/full/JjoXpVw",
         "name": "Toemomo character demo",

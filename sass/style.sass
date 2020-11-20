@@ -46,6 +46,9 @@ p
     font-weight: 500
     line-height: 1.2
 
+.fas
+    transition: 0.5s
+
 section
     padding: 60px 0
     *
@@ -446,6 +449,9 @@ footer#footer
         border-radius: .5rem
         position: relative
 
+        +mobile
+            width: 90vw
+
         &_header
             padding: 1.5rem
             position: relative
@@ -475,7 +481,7 @@ footer#footer
             flex-direction: row-reverse
 
             +mobile
-                width: 98%
+                width: 97.5%
                 height: 65vh
                 flex-direction: column
             &_img
