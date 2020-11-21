@@ -94,6 +94,9 @@ class Modal {
                 <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
             </div>
             <div class="modal_main_body_img">
+                <div class="modal_main_body_loading">
+                    <div class="loading"></div>
+                </div>
                 <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
             </div>`;
         this.$title.text(data.name);
@@ -111,6 +114,17 @@ class Modal {
                 </a>`
             this.$texts.append(btn)
         }
+        this.imgLoadEvent();
+    }
+    imgLoadEvent() {
+        const $img = $('.modal_main_body_img img');
+        const $loading = $('.modal_main_body_loading');
+        $loading.show();
+        $img.hide();
+        $img.on('load', function(){
+            $loading.hide();
+            $img.fadeIn();
+        });
     }
     emptySouce() {
         this.$outer.removeClass('show about')
