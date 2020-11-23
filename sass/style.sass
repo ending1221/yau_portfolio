@@ -35,6 +35,7 @@ body,html
     padding: 0
     color: var(--normalText)
     position: relative
+    overflow-x: hidden
 
 p
     font-weight: var(--textWeight)
@@ -355,10 +356,10 @@ section#hi
 
 section#works
     background-color: var(--workBackground)
-    padding: 0px
     display: flex
     flex-wrap: wrap
     padding: 0
+    overflow-x: hidden 
     .work
         z-index: 17
         box-sizing: border-box
@@ -488,6 +489,9 @@ footer#footer
                 position: relative
                 height: 70vh
                 overflow: hidden
+                display: flex
+                justify-content: center
+                align-items: center
 
             &_img
                 width: 70%
@@ -792,6 +796,13 @@ footer#footer
                     width: 100%
 
 
+.outerLoading
+    position: relative
+    height: 30vh
+    background-color: var(--workBackground)
+    display: flex
+    justify-content: center
+    align-items: center
     
 .loading
     position: absolute
@@ -801,8 +812,8 @@ footer#footer
     top: 0
     margin: auto
     border: .25rem solid var(--grey_5)
-    border-right: .25rem solid var(--purple_1)
-    border-bottom: .25rem solid var(--purple_1)
+    border-right: .25rem solid var(--purple_3)
+    border-bottom: .25rem solid var(--purple_3)
     height: 3rem
     width: 3rem
     border-radius: 100%
@@ -810,6 +821,14 @@ footer#footer
     -moz-animation: loading 1s infinite linear
     -o-animation: loading 1s infinite linear
     animation: loading 1s infinite linear
+
+.loadingText
+    color: var(--purple_3)
+    font-family: '微軟正黑體'
+    letter-spacing: 1px
+    font-size: .8rem
+    margin-top: 6rem
+
 
 @-webkit-keyframes loading 
     from 

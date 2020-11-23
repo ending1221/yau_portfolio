@@ -1,6 +1,6 @@
-$(document).ready(function () {
-    scrollEvent();
-});
+// $(document).ready(function () {
+//     scrollEvent();
+// });
 
 function scrollEvent() {
     $("a").on('click', function (event) {
@@ -21,9 +21,10 @@ function getWorkData() {
         url: 'data/works.json',
         dataType: 'json',
         success: function(r) {
-            console.log(r);
+            $('section#works').hide()
             getWork(r)
             modal.datas = r
+            worksLoadEvent(r.length)
         }
     })
 }
@@ -38,7 +39,7 @@ function getWork(data) {
             <span class="text">${work.name}</span>
         </div>`
     })
-    $('section#works').html(html)
+    $('section#works').append(html)
 }
 
 
@@ -96,6 +97,7 @@ class Modal {
             <div class="modal_main_body_img">
                 <div class="modal_main_body_loading">
                     <div class="loading"></div>
+                    <p class="loadingText">Loading...</p>
                 </div>
                 <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
             </div>`;
@@ -116,8 +118,9 @@ class Modal {
         }
         this.imgLoadEvent();
     }
+
     imgLoadEvent() {
-        const $img = $('.modal_main_body_img img');
+        const $img = $('.modal_main_body img');
         const $loading = $('.modal_main_body_loading');
         $loading.show();
         $img.hide();
@@ -298,26 +301,29 @@ function workOnclick() {
         modal.workIndex = $(this).data('index');
         modal.showSouce();
     })
-    
 }
 
+function navbarClick() {
+    $('.navbar-menu').click(function(){
+        $(this).toggleClass('open');
+        $('.navbar').toggleClass('open');
+    })
+    
+    $('.navbar-nav .nav-item').click(function(e){
+        if($(this).find('.nav-link').data('link') === 'about') {
+            $('.modal').addClass('show about');
+            modal.showAbout()
+        }
+        $('.navbar-menu').removeClass('open');
+        $('.navbar').removeClass('open');
+    })
+}
+
+scrollEvent();
 const modal = new Modal($('.modal'));
 getWorkData();
 workOnclick();
-
-$('.navbar-menu').click(function(){
-	$(this).toggleClass('open');
-	$('.navbar').toggleClass('open');
-})
-
-$('.navbar-nav .nav-item').click(function(e){
-    if($(this).find('.nav-link').data('link') === 'about') {
-        $('.modal').addClass('show about');
-        modal.showAbout()
-    }
-    $('.navbar-menu').removeClass('open');
-    $('.navbar').removeClass('open');
-})
+navbarClick();
 
 $('#toggle-theme').click(function() {
     const $icon = $('.themeIcon .fas')
@@ -332,4 +338,15 @@ $('#toggle-theme').click(function() {
         $icon.attr('title','切換為普通模式');
     }
 })
+
+function worksLoadEvent(length) {
+    let load = 0;
+    $('section#works img').on('load',function() {
+        load += 1
+        if(load === length) {
+            $('section#works').fadeIn()
+            $('.outerLoading').hide()
+        }
+    })
+}
 
