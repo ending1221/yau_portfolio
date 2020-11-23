@@ -321,16 +321,15 @@ $('.navbar-nav .nav-item').click(function(e){
 
 $('#toggle-theme').click(function() {
     const $icon = $('.themeIcon .fas')
-    console.log("Switching theme");
-    if (document.documentElement.hasAttribute('theme')) {
-        document.documentElement.removeAttribute('theme');
+    if ($(document.documentElement).attr('theme')) {
+        $(document.documentElement).removeAttr('theme');
         $icon.removeClass('fa-sun').addClass('fa-moon');
         $icon.attr('title','切換為夜間模式');
     }
     else {
-        document.documentElement.setAttribute('theme', 'dark');
+        $(document.documentElement).attr('theme', 'dark');
         $icon.removeClass('fa-moon').addClass('fa-sun');
         $icon.attr('title','切換為普通模式');
     }
-    console.log(document.documentElement.hasAttribute('theme'));
 })
+

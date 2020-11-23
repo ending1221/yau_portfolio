@@ -484,6 +484,11 @@ footer#footer
                 width: 97.5%
                 height: 65vh
                 flex-direction: column
+            &_loading
+                position: relative
+                height: 70vh
+                overflow: hidden
+
             &_img
                 width: 70%
                 +mobile
@@ -538,6 +543,7 @@ footer#footer
                     overflow: hidden
                     white-space: nowrap
                     position: relative
+                    min-width: 25px
                     img
                         animation: arrow 5s infinite
                         width: 1.5rem
@@ -794,12 +800,12 @@ footer#footer
     bottom: 0
     top: 0
     margin: auto
-    border: 3px solid rgb(35, 40, 45)
-    border-right: 3px solid #fff
-    border-bottom: 3px solid #fff
-    height: 50px
-    width: 50px
-    border-radius: 50%
+    border: .25rem solid var(--grey_5)
+    border-right: .25rem solid var(--purple_1)
+    border-bottom: .25rem solid var(--purple_1)
+    height: 3rem
+    width: 3rem
+    border-radius: 100%
     -webkit-animation: loading 1s infinite linear
     -moz-animation: loading 1s infinite linear
     -o-animation: loading 1s infinite linear
