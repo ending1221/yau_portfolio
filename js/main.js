@@ -1,6 +1,38 @@
-// $(document).ready(function () {
-//     scrollEvent();
-// });
+function changeLangEvent() {
+    $('.navbar_nav .nav_language li').on('click', function() {
+        const lang = $(this).data('language');
+        console.log(window.I18n[lang])
+        modal.lang = lang;
+        changeNavText(lang);
+        changeIndexText(lang);
+        changeHiText(lang);
+        getWorkData(lang);
+    })
+}
+
+function changeHiText(lang) {
+    const I18n = window.I18n[lang]
+    const html = `
+        <h2>${I18n['HI_TITLE']}</h2>
+        <p>${I18n['HI_P_1']}</p>
+        <p>${I18n['HI_P_2']}</p>
+        <p>${I18n['HI_P_3']}</p>`;
+    $('section#hi').html(html);
+}
+
+function changeIndexText(lang) {
+    $('section#index .text').text(window.I18n[lang]['INDEX_TITLE']);
+}
+
+function changeNavText(lang) {
+    const I18n = window.I18n[lang];
+    const links = $('.navbar').find('.nav_link');
+    for (let i = 0; i < links.length; i++) {
+        const $link = $(links[i])
+        if ($link.data('link')==='works') $link.text(I18n['NAV_ITEM_WORK'])
+        if ($link.data('link')==='about') $link.text(I18n['NAV_ITEM_ABOUT'])
+    }
+}
 
 function scrollEvent() {
     $("a").on('click', function (event) {
@@ -16,30 +48,32 @@ function scrollEvent() {
     });
 }
 
-function getWorkData() {
+function getWorkData(lang) {
     $.ajax({
         url: 'data/works.json',
         dataType: 'json',
         success: function(r) {
             $('section#works').hide()
-            getWork(r)
+            getWork(r, lang)
             modal.datas = r
             worksLoadEvent(r.length)
         }
     })
 }
 
-function getWork(data) {
+function getWork(data, lang='en') {
     let html = '';
+    console.log(lang)
     data.map((work, i) => {
+        console.log(work[lang].name)
         html += `
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
-            <img src=${work.img} alt=${work.name} />
-            <span class="text">${work.name}</span>
+            <img src=${work.img} alt=${work[lang].name} />
+            <span class="text">${work[lang].name}</span>
         </div>`
     })
-    $('section#works').append(html)
+    $('section#works').html(html)
 }
 
 
@@ -66,6 +100,7 @@ class Modal {
         this.datas = null;
         this.workIndex = null;
         this.$outer = $outer;
+        this.lang = 'en';
         this.getHtml()
         this.closeOnclick()
     }
@@ -90,16 +125,17 @@ class Modal {
         if (this.workIndex === null) return
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
+        const I18n = window.I18n[this.lang]
         const html = `
             <div class="modal_main_body_texts">
-                <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
+                <h2>${data[this.lang].name}</h2><hr /><p>${I18n['MODAL_TEXTS']} : <br>${data.language}</p><p>${data[this.lang].text}</p>
             </div>
             <div class="modal_main_body_img">
                 <div class="modal_main_body_loading">
                     <div class="loading"></div>
                     <p class="loadingText">Loading...</p>
                 </div>
-                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
+                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data[this.lang].name} />
             </div>`;
         this.$title.text(data.name);
         this.$body.html(html)
@@ -108,7 +144,7 @@ class Modal {
             // 有連結才顯示按紐
             const btn = `
                 <a href=${data.url} target="_blank" class="modal_btn">
-                    <span>Go to demo</span>
+                    <span>${I18n['MODAL_BTN']}</span>
                     <div class="arrow">
                         <img src="img/arrow.png" />
                         <img src="img/arrow_1.png" />
@@ -304,17 +340,17 @@ function workOnclick() {
 }
 
 function navbarClick() {
-    $('.navbar-menu').click(function(){
+    $('.navbar_menu').click(function(){
         $(this).toggleClass('open');
         $('.navbar').toggleClass('open');
     })
     
-    $('.navbar-nav .nav-item').click(function(e){
-        if($(this).find('.nav-link').data('link') === 'about') {
+    $('.navbar_nav .nav_item').click(function(e){
+        if($(this).find('.nav_link').data('link') === 'about') {
             $('.modal').addClass('show about');
             modal.showAbout()
         }
-        $('.navbar-menu').removeClass('open');
+        $('.navbar_menu').removeClass('open');
         $('.navbar').removeClass('open');
     })
 }
@@ -324,8 +360,9 @@ const modal = new Modal($('.modal'));
 getWorkData();
 workOnclick();
 navbarClick();
+changeLangEvent();
 
-$('#toggle-theme').click(function() {
+$('#toggle_theme').click(function() {
     const $icon = $('.themeIcon .fas')
     if ($(document.documentElement).attr('theme')) {
         $(document.documentElement).removeAttr('theme');

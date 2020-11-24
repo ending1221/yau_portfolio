@@ -2,141 +2,261 @@
     {
         "img": "img/torii.jpg",
         "url": "https://ending1221.github.io/Torii/",
-        "name": "Torii",
         "language": "HTML / SASS",
-        "text": "Use the input feature to make a click transition animation."
+        "zh-tw": {
+            "name": "鳥居",
+            "text": "利用 input 特性，製作點擊轉場動畫。"
+        },
+        "en": {
+            "name": "Torii",
+            "text": "Use the input feature to make a click transition animation."
+        }
     },
     {
         "img": "img/reactPage.jpg",
         "url": "https://ending1221.github.io/react-page/",
-        "name": "React.js Cart",
         "language": "React.js / SCSS / JavaScript / RWD",
-        "text": "Use React.js to make this store website, you can add goods to the shopping cart to checkout."
+        "zh-tw": {
+            "name": "React.js 購物車",
+            "text": "使用 React.js 製作此商店網站，可加入商品至購物車內結帳，暫無串接金流。"
+        },
+        "en": {
+            "name": "React.js Cart",
+            "text": "Use React.js to make this store website, you can add goods to the shopping cart to checkout."
+        }
     },
     {
         "img": "img/ems_dashboard.jpg",
         "url": "https://www.notion.so/EMS-4715f6cf6cd7466794d3ac55b5476cfe",
-        "name": "Cyan EMS Dashboard",
         "language": "HTML / SCSS / Bootstrap / jQuery /  Devextreme / CanvasJS / RWD / SPA",
-        "text": "Single Page Application, some cut versions use Bootstrap, charts use Devextreme / CanvasJS."
+        "zh-tw": {
+            "name": "迅杰 EMS 儀表板 (Dashboard)",
+            "text": "此作品為 SPA (Single Page Applicatio)，部分切版使用 Bootstrap，圖表使用套件 Devextreme / CanvasJS。"
+        },
+        "en": {
+            "name": "Cyan EMS Dashboard",
+            "text": "Single Page Application, some cut versions use Bootstrap, charts use Devextreme / CanvasJS."
+        }
     },
     {
         "img": "img/lavender.jpg",
         "url": "https://ending1221.github.io/Lavender/",
-        "name": "Lavender Web Design",
         "language": "HTML / SASS / JavaScript / skrollr.js / RWD",
-        "text": "Originally made with bootstrap, it has been updated to use jQuery and add basic RWD."
+        "zh-tw": {
+            "name": "薰衣草 - 專題網頁",
+            "text": "原使用 bootstrap 製作，已更新為純使用jQuery，並加上基礎RWD。"
+        },
+        "en": {
+            "name": "Lavender Web Design",
+            "text": "Originally made with bootstrap, it has been updated to use jQuery and add basic RWD."
+        }
     },
     {
         "img": "img/oee.jpg",
         "url": "https://www.notion.so/7dc0608939384b45a58cb55b9d57c291",
-        "name": "Cyan OEE Dashboard",
         "language": "HTML / SCSS / Bootstrap / jQuery /  Devextreme / CanvasJS / RWD / SPA",
-        "text": "Single Page Application, some cut versions use Bootstrap, charts use Devextreme / CanvasJS."
+        "zh-tw": {
+            "name": "迅杰 OEE 儀表板 (Dashboard)",
+            "text": "此作品為 SPA (Single Page Applicatio)，部分切版使用 Bootstrap，圖表使用套件 Devextreme / CanvasJS。"
+        },
+        "en": {
+            "name": "Cyan OEE Dashboard",
+            "text": "Single Page Application, some cut versions use Bootstrap, charts use Devextreme / CanvasJS."
+        }
     },
     {
         "img": "img/weatherCrystalBall.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_Crystal-ball/",
-        "name": "weather crystal ball",
         "language": "HTML / SASS / API / SVG",
-        "text": "Connect to the Meteorological Bureau API and use the input feature to make a click transition animation."
+        "zh-tw": {
+            "name": "動態天氣水晶球",
+            "text": "串接氣象局 API，利用 input 特性，製作點擊轉場動畫。"
+        },
+        "en": {
+            "name": "weather crystal ball",
+            "text": "Connect to the Meteorological Bureau API and use the input feature to make a click transition animation."
+        }
     },
     {
         "img": "img/toemomo_web.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_index/",
-        "name": "Toemomo Web Design",
         "language": "Bootstrap / SASS / jQuery / Vue.js",
-        "text": "Use Vue.js for the first time, practice making web pages."
+        "zh-tw": {
+            "name": "Toemomo 主題網頁",
+            "text": "此為使用 Vue.js 製作的第一個網頁，並利用滑鼠座標製作互動動畫。"
+        },
+        "en": {
+            "name": "Toemomo Web Design",
+            "text": "Use Vue.js for the first time, practice making web pages."
+        }
     },
     {
         "img": "img/hiragana.jpg",
         "url": "https://ending1221.github.io/Japanese-hiragana-transducer/",
-        "name": "Japanese hiragana transducer",
         "language": "HTML / SCSS / JavaScript",
-        "text": "Provide hiragana and roman pinyin conversion."
+        "zh-tw": {
+            "name": "五十音轉換器",
+            "text": "提供五十音與羅馬拼音轉換，目前轉換支援：單次轉換僅能有平假名或片假名。"
+        },
+        "en": {
+            "name": "Japanese hiragana transducer",
+            "text": "Provide hiragana and roman pinyin conversion."
+        }
     },
     {
         "img": "img/catchGame.jpg",
         "url": "https://ending1221.github.io/Catch-game/",
-        "name": "Catch game",
         "language": "HTML / SCSS / JavaScript",
-        "text": "In the catching game, players can use the left and right arrow keys to play the game."
+        "zh-tw": {
+            "name": "接球遊戲",
+            "text": "玩家可使用左右方向鍵進行遊戲，接到球即得分，球的速度會隨著時間增快以增加難度。"
+        },
+        "en": {
+            "name": "Catch game",
+            "text": "In the catching game, players can use the left and right arrow keys to play the game."
+        }
     },
     {
         "img": "img/toemomo_character.jpg",
         "url": "https://codepen.io/Yau1221/full/JjoXpVw",
-        "name": "Toemomo character demo",
         "language": "HTML / SASS",
-        "text": "Practice using sass to draw the Iphone and make a simple page change effect."
+        "zh-tw": {
+            "name": "TOEMOMO 角色介紹",
+            "text": "練習使用 Sass 繪製 Iphone，並進行簡單的頁面切換動畫。"
+        },
+        "en": {
+            "name": "Toemomo character demo",
+            "text": "Practice using sass to draw the Iphone and make a simple page change effect."
+        }
     },
     {
         "img": "img/shootingDartsGame.jpg",
         "url": "https://codepen.io/Yau1221/full/jOEzRyw",
-        "name": "shooting darts game",
         "language": "HTML / SASS / jQuery",
-        "text": "A simple dart shooting game made with online courses."
+        "zh-tw": {
+            "name": "飛鏢射擊遊戲",
+            "text": "學習時跟著課程製作的飛鏢射擊遊戲。"
+        },
+        "en": {
+            "name": "shooting darts game",
+            "text": "A simple dart shooting game made with online courses."
+        }
     },
     {
         "img": "img/ems_web.jpg",
         "url": "https://www.notion.so/EMS-a6fd284386ac4149b572a53c5e13fcc9",
-        "name": "Cyan EMS Web",
         "language": "HTML / SCSS / jQuery / Bootstrap",
-        "text": "The product’s activity webpage provides customer information to the back-end to calculate the electricity bills that can be saved."
+        "zh-tw": {
+            "name": "迅杰 EMS 行銷網頁",
+            "text": "此網頁為 SPA (Single Page Applicatio)，利用客戶提供電費資訊，將資料提供給後端，以計算可提供的電費。"
+        },
+        "en": {
+            "name": "Cyan EMS Web",
+            "text": "Single Page Application, The product’s activity webpage provides customer information to the back-end to calculate the electricity bills that can be saved."
+        }
     },
     {
         "img": "img/getBeer.jpg",
         "url": "https://codepen.io/Yau1221/full/MWYrdKg",
-        "name": "Get some beer!",
         "language": "HTML / SASS",
-        "text": "Practice css absolute positioning, long press will display animation."
+        "zh-tw": {
+            "name": "來點啤酒吧!",
+            "text": "練習 CSS 絕對定位，長按將顯示動畫。"
+        },
+        "en": {
+            "name": "Get some beer!",
+            "text": "Practice css absolute positioning, long press will display animation."
+        }
     },
     {
         "img": "img/buylist.jpg",
         "url": "https://codepen.io/Yau1221/full/ExaydqL",
-        "name": "Buylist",
         "language": "HTML / SASS",
-        "text": "Practice ajax for the first time, dynamically add to the list, and practice integrating sass color variables."
+        "zh-tw": {
+            "name": "購物清單",
+            "text": "第一次練習 Ajax，動態添加項目到列表中，並練習 sass 顏色變數。"
+        },
+        "en": {
+            "name": "Buylist",
+            "text": "Practice ajax for the first time, dynamically add to the list, and practice integrating sass color variables."
+        }
     },
     {
         "img": "img/posterDesign.jpg",
         "url": "",
-        "name": "Poster design",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "Catering-related marketing business posters."
+        "zh-tw": {
+            "name": "海報設計",
+            "text": "餐飲相關行銷海報設計。"
+        },
+        "en": {
+            "name": "Poster design",
+            "text": "Catering-related marketing business posters."
+        }
     },
     {
         "img": "img/asahiProject.jpg",
         "url": "",
-        "name": "Asahi project",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "Created a poster and a table stand."
+        "zh-tw": {
+            "name": "Asahi 設計專案",
+            "text": "此專案設計了活動海報及桌上立牌。"
+        },
+        "en": {
+            "name": "Asahi project",
+            "text": "Created a poster and a table stand."
+        }
     },
     {
         "img": "img/cardsDesign.jpg",
         "url": "",
-        "name": "Cards design",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "Business card, shop card design"
+        "zh-tw": {
+            "name": "卡片類設計",
+            "text": "店舖名片設計。"
+        },
+        "en": {
+            "name": "Cards design",
+            "text": "Business card, shop card design"
+        }
     },
     {
         "img": "img/damuheiPoliModel.jpg",
         "url": "",
-        "name": "Damuhei poli model",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "Damuhei is the mascot of the restaurant, this doll is made of poly."
+        "zh-tw": {
+            "name": "大目黑 poil 公仔",
+            "text": "大目黑為餐廳吉祥物，此公仔材質為 poil。"
+        },
+        "en": {
+            "name": "Damuhei poli model",
+            "text": "Damuhei is the mascot of the restaurant, this doll is made of poly."
+        }
     },
     {
         "img": "img/giftPremiumDesign.jpg",
         "url": "",
-        "name": "Gift premium design",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "T-shirt pattern design."
+        "zh-tw": {
+            "name": "贈品設計",
+            "text": "T-shirt 圖案設計。"
+        },
+        "en": {
+            "name": "Gift premium design",
+            "text": "T-shirt pattern design."
+        }
     },
     {
         "img": "img/couponDesign.jpg",
         "url": "",
-        "name": "Coupon design",
         "language": "Photoshop CS6 / Illustrator CS6",
-        "text": "Discount coupon design."
+        "zh-tw": {
+            "name": "優惠券設計",
+            "text": "優惠、折價券等券面設計。"
+        },
+        "en": {
+            "name": "Coupon design",
+            "text": "Discount coupon design."
+        }
     }
 ]
