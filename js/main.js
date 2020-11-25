@@ -7,6 +7,7 @@ function changeLangEvent() {
         changeIndexText(lang);
         changeHiText(lang);
         getWorkData(lang);
+        toggleThemeEvent(lang);
         const text = lang === 'en' ? ' ENGLISH' : ' 繁體中文';
         $('.nav_language .nav_link_text').text(text)
     })
@@ -357,19 +358,26 @@ function navbarClick() {
     })
 }
 
-$('#toggle_theme').click(function() {
-    const $icon = $('.themeIcon .fas')
-    if ($(document.documentElement).attr('theme')) {
-        $(document.documentElement).removeAttr('theme');
-        $icon.removeClass('fa-sun').addClass('fa-moon');
-        $icon.attr('title','切換為夜間模式');
-    }
-    else {
-        $(document.documentElement).attr('theme', 'dark');
-        $icon.removeClass('fa-moon').addClass('fa-sun');
-        $icon.attr('title','切換為普通模式');
-    }
-})
+function toggleThemeEvent(lang='en') {
+    const I18n = window.I18n[lang]
+    const $theme = $('#toggle_theme');
+    const $document = $(document.documentElement);
+    $theme.off('click');
+    $theme.on('click', function() {
+        const $icon = $('.themeIcon .fas')
+        if ($document.attr('theme')) {
+            $document.removeAttr('theme');
+            $icon.removeClass('fa-sun').addClass('fa-moon');
+            $icon.attr('title', I18n['THEME_TITLE_DARK']);
+        }
+        else {
+            $document.attr('theme', 'dark');
+            $icon.removeClass('fa-moon').addClass('fa-sun');
+            $icon.attr('title',I18n['THEME_TITLE_LIGHT']);
+        }
+    })
+}
+
 
 function worksLoadEvent(length) {
     let load = 0;
@@ -395,3 +403,4 @@ workOnclick();
 navbarClick();
 changeLangEvent();
 languageEvent();
+toggleThemeEvent();
