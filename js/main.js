@@ -7,6 +7,8 @@ function changeLangEvent() {
         changeIndexText(lang);
         changeHiText(lang);
         getWorkData(lang);
+        const text = lang === 'en' ? ' ENGLISH' : ' 繁體中文';
+        $('.nav_language .nav_link_text').text(text)
     })
 }
 
@@ -355,13 +357,6 @@ function navbarClick() {
     })
 }
 
-scrollEvent();
-const modal = new Modal($('.modal'));
-getWorkData();
-workOnclick();
-navbarClick();
-changeLangEvent();
-
 $('#toggle_theme').click(function() {
     const $icon = $('.themeIcon .fas')
     if ($(document.documentElement).attr('theme')) {
@@ -387,3 +382,16 @@ function worksLoadEvent(length) {
     })
 }
 
+function languageEvent() {
+    $('.navbar .nav_language').click(function() {
+        $(this).find('.nav_language_list').toggleClass('open')
+    })
+}
+
+scrollEvent();
+const modal = new Modal($('.modal'));
+getWorkData();
+workOnclick();
+navbarClick();
+changeLangEvent();
+languageEvent();

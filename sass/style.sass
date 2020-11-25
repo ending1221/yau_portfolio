@@ -137,6 +137,40 @@ header.navbar
                 color: var(--purple_1)
                 padding: 0px
                 text-decoration: none
+        .nav_language
+            position: relative
+            *
+                transition: 0.5s
+            .nav_link
+                transition-delay: -.5s
+            &_list
+                visibility: hidden
+                position: absolute
+                top: 1.5rem
+                left: 0
+                min-width: 80px
+                padding-left: 0
+                overflow: hidden
+                height: 0
+                color: var(--purple_5)
+                li
+                    background-color: var(--purple_1)
+                    padding: 0 .75rem    
+                    cursor: pointer    
+                         
+                
+
+            &_list.open
+                visibility: visible
+                overflow: initial
+                height: 200px
+                li
+                    padding: .75rem
+                    &:hover
+                        transition-delay: 0s
+                        opacity: 0.9  
+
+                    
 
                 
 
