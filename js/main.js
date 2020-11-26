@@ -66,9 +66,7 @@ function getWorkData(lang) {
 
 function getWork(data, lang='en') {
     let html = '';
-    console.log(lang)
     data.map((work, i) => {
-        console.log(work[lang].name)
         html += `
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
@@ -343,9 +341,14 @@ function workOnclick() {
 }
 
 function navbarClick() {
-    $('.navbar_menu').click(function(){
+    const $navbar = $('header.navbar');
+    const $menu = $navbar.find('.navbar_menu');
+    const $langList = $navbar.find('.nav_language_list');
+    
+    $menu.click(function(){
         $(this).toggleClass('open');
-        $('.navbar').toggleClass('open');
+        $navbar.toggleClass('open');
+        $langList.removeClass('open');
     })
     
     $('.navbar_nav .nav_item').click(function(e){
@@ -353,8 +356,12 @@ function navbarClick() {
             $('.modal').addClass('show about');
             modal.showAbout()
         }
-        $('.navbar_menu').removeClass('open');
-        $('.navbar').removeClass('open');
+        //點選 language 選單不縮起
+        if($(this).hasClass('nav_language')) return
+
+        $langList.removeClass('open');
+        $menu.removeClass('open');
+        $navbar.removeClass('open');
     })
 }
 

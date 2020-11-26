@@ -29,6 +29,21 @@
     left: 50%
     transform: translateX(-50%)
 
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+=animation($content)
+    -webkit-animation: $content
+    -moz-animation: $content
+    -o-animation: $content
+    animation: $content
 
 body,html
     margin: 0
@@ -145,24 +160,39 @@ header.navbar
                 min-width: 80px
                 padding-left: 0
                 overflow: hidden
-                height: 0
+                max-height: 0
                 color: var(--purple_5)
+                opacity: 0.95
                 li
                     background-color: var(--purple_1)
                     padding: 0 .75rem    
                     cursor: pointer    
-                         
-                
+                +mobile
+                    position: relative
+                    top: initial
+                    left: initial
+                    li 
+                        background-color: var(--grey_4)
+                        color: var(--purple_1)
+                        border-top: solid 1px var(--purple_1)
+
+
 
             &_list.open
                 visibility: visible
                 overflow: initial
-                height: 200px
+                max-height: initial
                 li
                     padding: .75rem
                     &:hover
                         transition-delay: 0s
                         opacity: 0.9  
+                        +mobile
+                            background-color: var(--grey_5)
+                        
+                +mobile
+                    max-height: 100px
+
     +mobile
         flex-wrap: wrap
         .navbar_nav
@@ -190,10 +220,6 @@ header.navbar
                 .nav_link
                     display: block
                     padding: 1rem .5rem
-
-                    
-
-                
 
     .navbar_menu
         display: none
@@ -353,11 +379,11 @@ section#index
             & :nth-child(#{$i})
                 @for $j from 1 through 2
                     img
-                        animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+                        +animation(key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s)
                         +mobile
-                            animation: key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+                            +animation(key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s)
 
-@keyframes key1
++keyframes(key1)
     0%
         left: 0px
     3%
@@ -369,7 +395,7 @@ section#index
     100%
         left: 0px
 
-@keyframes key2
++keyframes(key2)
     0%
         left: 0px
     3%
@@ -858,10 +884,7 @@ footer#footer
     height: 3rem
     width: 3rem
     border-radius: 100%
-    -webkit-animation: loading 1s infinite linear
-    -moz-animation: loading 1s infinite linear
-    -o-animation: loading 1s infinite linear
-    animation: loading 1s infinite linear
+    +animation(loading 1s infinite linear)
 
 .loadingText
     color: var(--purple_3)
@@ -871,34 +894,9 @@ footer#footer
     margin-top: 6rem
 
 
-@-webkit-keyframes loading 
-    from 
-        -webkit-transform: rotate(0deg)
-    
-    to 
-        -webkit-transform: rotate(360deg)
-    
-
-@-moz-keyframes loading 
-    from 
-        -moz-transform: rotate(0deg)
-    
-    to 
-        -moz-transform: rotate(360deg)
-    
-
-@-o-keyframes loading 
-    from 
-        -o-transform: rotate(0deg)
-    
-    to 
-        -o-transform: rotate(360deg)
-    
-
-@keyframes loading 
++keyframes(loading)
     from 
         transform: rotate(0deg)
-    
     to 
         transform: rotate(360deg)
     
