@@ -200,47 +200,59 @@ class Modal {
                         <h2>專業技能</h2>
                         <hr/>
                         <ul class="skills">
-                            <li>平面設計
-                            <div class="cir">
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                                <div class="p360"></div>
-                            </div>
+                            <li>
+                                <h3>平面設計</h3>
+                                <h5>Graphic design</h5>
+                                <div class="cir">
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                    <div class="p360"></div>
+                                </div>
                             </li>
-                            <li>行銷企劃
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>行銷企劃</h3>
+                                <h5>Marketing planning</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>影片剪輯
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>影片剪輯</h3>
+                                <h5>Movie clip</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>網站開發
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>前端開發</h3>
+                                <h5>Front-end</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>社群行銷
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                            </div>
+                            <li>
+                                <h3>社群行銷</h3>
+                                <h5>Social marketing</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                </div>
                             </li>
-                            <li>專案管理
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>專案管理</h3>
+                                <h5>Project management</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
                         </ul>
                         </div>
@@ -314,12 +326,14 @@ class Modal {
                                 <li class="year">2009
                                 <ul> 
                                     <li class="name">復興商工</li>
+                                    <li class="enName">Fu-Hsin Trade & Arts School</li>
                                     <li>廣告設計科 Advertising Design</li>
                                 </ul>
                                 </li>
                                 <li class="year">2011<br/>|<br/>2015
                                 <ul> 
                                     <li class="name">致理科技大學</li>
+                                    <li class="enName">Chihlee University of Technology</li>
                                     <li>多媒體設計系 <br/>Department of Multimedia Design</li>
                                 </ul>
                                 </li>
