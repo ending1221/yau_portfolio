@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Chivo&display=swap')
-@import '../css/theme.css'
+
 
 =mobile
     @media(max-width: 768px)
@@ -29,12 +29,28 @@
     left: 50%
     transform: translateX(-50%)
 
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
+
+=animation($content)
+    -webkit-animation: $content
+    -moz-animation: $content
+    -o-animation: $content
+    animation: $content
 
 body,html
     margin: 0
     padding: 0
     color: var(--normalText)
     position: relative
+    overflow-x: hidden
 
 p
     font-weight: var(--textWeight)
@@ -46,12 +62,15 @@ p
     font-weight: 500
     line-height: 1.2
 
+.fas
+    transition: 0.5s
+
 section
     padding: 60px 0
     *
         font-family: '微軟正黑體'
 
-header.navbar
+header.navbar    
     position: fixed
     top: 0
     right: 0
@@ -70,7 +89,7 @@ header.navbar
         width: 30px
         margin: 20px
 
-    #toggle-theme
+    #toggle_theme
         background-color: transparent
         outline: none
         border: none
@@ -100,7 +119,7 @@ header.navbar
             i
                 color: var(--purple_5)
 
-    .navbar-nav
+    .navbar_nav
         padding: 0
         margin: 0
         margin-right: 2.5rem
@@ -112,31 +131,98 @@ header.navbar
             text-decoration: none
             list-style: none
 
-        +mobile
-            display: none
-            overflow: hidden
-            transition-delay: .5s
-            border-bottom: solid 1px var(--purple_3)
-
-        .nav-item
+        .nav_item
             margin: 1.5rem
             border-bottom: solid 1px transparent
             font-family: 'Chivo','微軟正黑體'
             &:hover
                 border-bottom: solid 1px var(--purple_3)
-                .nav-link
+                .nav_link
                     color: var(--purple_3)
                     cursor: pointer
 
-            .nav-link
+            .nav_link
                 transition: 0.5s
                 color: var(--purple_1)
                 padding: 0px
                 text-decoration: none
+        .nav_language
+            position: relative
+            *
+                transition: 0.5s
+            .nav_link
+                transition-delay: -.5s
+            &_list
+                visibility: hidden
+                position: absolute
+                top: 1.5rem
+                left: 0
+                min-width: 80px
+                padding-left: 0
+                overflow: hidden
+                max-height: 0
+                color: var(--purple_5)
+                opacity: 0.95
+                li
+                    background-color: var(--purple_1)
+                    padding: 0 .75rem    
+                    cursor: pointer    
+                +mobile
+                    position: relative
+                    top: initial
+                    left: initial
+                    li 
+                        background-color: var(--grey_4)
+                        color: var(--purple_1)
+                        border-top: solid 1px var(--purple_1)
 
-                
 
-    .navbar-menu
+
+            &_list.open
+                visibility: visible
+                overflow: initial
+                max-height: initial
+                opacity: 0.9
+                li
+                    padding: .75rem
+                    &:hover
+                        transition-delay: 0s
+                        opacity: 0.9  
+                        +mobile
+                            background-color: var(--grey_5)
+                        
+                +mobile
+                    max-height: 100px
+
+    +mobile
+        flex-wrap: wrap
+        .navbar_nav
+            opacity: 0
+            display: block
+            visibility: hidden
+            overflow: hidden
+            width: calc(100% + 40px)
+            margin: -20px
+            margin-top: 1rem
+            border-bottom: rgba(#fff,0.6) solid 1px
+            .nav_item
+                width: 100%
+                text-align: center
+                margin: 0
+                background-color: var(--purple_5)
+                border-top: rgba(#fff,0.6) solid 1px
+                border-bottom: solid 1px transparent
+                transition: 0.5s
+                &:hover
+                    opacity: 0.7
+                    background-color: var(--purple_4)
+                    .nav_link
+                        color: var(--purple_1)
+                .nav_link
+                    display: block
+                    padding: 1rem .5rem
+
+    .navbar_menu
         display: none
         justify-content: center
         align-items: center
@@ -208,7 +294,7 @@ header.navbar
                     left: 15%
                     transition-delay: .25s
 
-    .navbar-menu.open
+    .navbar_menu.open
         #hamburger
             span
                 width: 0%
@@ -232,27 +318,13 @@ header.navbar
                     transition-delay: .375s
 
 .navbar.open
-    background-color: rgba(var(--purple_4), 0.8)
+    background-color: var(--purple_5)
     flex-wrap: wrap
-    .navbar-nav
-        display: block
-        width: calc(100% + 40px)
-        height: auto
-        margin: -20px
-        margin-top: 1rem
-        .nav-item
-            width: 100%
-            text-align: center
-            margin: 0
-            background-color: rgba(var(--purple_4), 0.8)
-            border-top: rgba(#fff,0.6) solid 1px
-            border-bottom: solid 1px transparent
-            transition: 0.5s
-            &:hover
-                background-color: rgba(var(--purple_5), 0.8)
-            .nav-link
-                display: block
-                padding: 1rem .5rem
+    opacity: 0.95
+    
+    .navbar_nav
+        opacity: 1
+        visibility: visible
 
 section#index
     background-color: var(--purple_5)
@@ -261,7 +333,7 @@ section#index
     flex-direction: column
     position: relative
     .text
-        color: var(--white)
+        color: #fff
         padding: 20px
         font-size: 16px
         letter-spacing: 2px
@@ -308,11 +380,11 @@ section#index
             & :nth-child(#{$i})
                 @for $j from 1 through 2
                     img
-                        animation: key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+                        +animation(key1 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s)
                         +mobile
-                            animation: key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s
+                            +animation(key2 6+random(5) + s infinite $i+(random(4)/2)*$j/2 + s)
 
-@keyframes key1
++keyframes(key1)
     0%
         left: 0px
     3%
@@ -324,7 +396,7 @@ section#index
     100%
         left: 0px
 
-@keyframes key2
++keyframes(key2)
     0%
         left: 0px
     3%
@@ -352,10 +424,10 @@ section#hi
 
 section#works
     background-color: var(--workBackground)
-    padding: 0px
     display: flex
     flex-wrap: wrap
     padding: 0
+    overflow-x: hidden 
     .work
         z-index: 17
         box-sizing: border-box
@@ -394,7 +466,7 @@ section#works
             +xycenter
             z-index: 5
             opacity: 0
-            color: var(--white)
+            color: #fff
             transition: 0.5s
             text-align: center
 
@@ -446,19 +518,22 @@ footer#footer
         border-radius: .5rem
         position: relative
 
+        +mobile
+            width: 90vw
+
         &_header
             padding: 1.5rem
             position: relative
             font-size: 1.5rem
             letter-spacing: 1px
-            color: var(--white)
+            color: #fff
 
             .close
                 background-color: transparent
                 border: none
                 padding: 0 .25rem
                 float: right
-                color: var(--white)
+                color: #fff
                 opacity: .5
                 cursor: pointer
                 font-size: 2rem
@@ -475,9 +550,17 @@ footer#footer
             flex-direction: row-reverse
 
             +mobile
-                width: 98%
+                width: 97.5%
                 height: 65vh
                 flex-direction: column
+            &_loading
+                position: relative
+                height: 70vh
+                overflow: hidden
+                display: flex
+                justify-content: center
+                align-items: center
+
             &_img
                 width: 70%
                 +mobile
@@ -491,7 +574,7 @@ footer#footer
             &_texts
                 width: 30%
                 padding: 2rem
-                color: var(--white)
+                color: #fff
                 +mobile
                     width: 100%
                     box-sizing: border-box
@@ -506,7 +589,7 @@ footer#footer
                 font-size: 1rem
                 border: var(--purple_1) solid .15rem
                 outline: none
-                color: var(--white)
+                color: #fff
                 transition: 0.5s
                 display: flex
                 &:hover
@@ -532,6 +615,7 @@ footer#footer
                     overflow: hidden
                     white-space: nowrap
                     position: relative
+                    min-width: 25px
                     img
                         animation: arrow 5s infinite
                         width: 1.5rem
@@ -584,32 +668,36 @@ footer#footer
         h1
             font-size: 24px  
             margin-bottom: 8px
-            color: var(--white)
+            color: #fff
             span
                 font-size: 14px
         h2
             margin: 0
             font-size: 20px
-            color: var(--white)
+            color: #fff
         h3
             font-size: 14px
             margin: 0
-            opacity: 0.7
+            opacity: 0.9
         h4
             margin: 0 0 .15rem 0
             font-size: 12px
-            color: rgba(var(--white), 0.6)
+            color: #fff
+        h5
+            opacity: 0.7
+            font-size: 10px
         hr
             border: 0
             height: 1px
-            background-color: rgba(var(--white), 0.6)
+            background-color: rgba(#fff, 0.6)
         i
             width: 16px
             text-align: center
             margin-right: 15px
             padding-right: 15px
-            color: var(--white)
-            border-right: solid 1px rgba(var(--white), 0.6)
+            color: #fff
+            border-right: solid 1px rgba(#fff, 0.6)
+            font-family: "Font Awesome 5 Free"
 
         .block
             margin-top: 35px
@@ -681,10 +769,12 @@ footer#footer
                         padding-left: 0px
                     
             .name
-                color: var(--white)
+                color: #fff
                 font-size: 16px
                 font-weight: 600
                 padding-bottom: 2.5px
+            .enName
+                font-size: 14px
                 
             .workExperience>li
                 display: flex
@@ -706,9 +796,19 @@ footer#footer
             .skills
                 display: flex
                 flex-wrap: wrap
+
+                h3
+                    opacity: 1
+                    color: #fff
                 
                 li
                     padding: .5rem
+                h5
+                    max-width: 60px
+                    margin-top: .25rem
+                    transform: scale(0.9)
+                    box-sizing: border-box
+
                 
             .cir
                 width: 60px
@@ -777,3 +877,42 @@ footer#footer
                     width: 90%
                 .value.p100
                     width: 100%
+
+
+.outerLoading
+    position: relative
+    height: 30vh
+    background-color: var(--workBackground)
+    display: flex
+    justify-content: center
+    align-items: center
+    
+.loading
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    margin: auto
+    border: .25rem solid var(--grey_5)
+    border-right: .25rem solid var(--purple_3)
+    border-bottom: .25rem solid var(--purple_3)
+    height: 3rem
+    width: 3rem
+    border-radius: 100%
+    +animation(loading 1s infinite linear)
+
+.loadingText
+    color: var(--purple_3)
+    font-family: '微軟正黑體'
+    letter-spacing: 1px
+    font-size: .8rem
+    margin-top: 6rem
+
+
++keyframes(loading)
+    from 
+        transform: rotate(0deg)
+    to 
+        transform: rotate(360deg)
+    

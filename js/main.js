@@ -1,6 +1,41 @@
-$(document).ready(function () {
-    scrollEvent();
-});
+function changeLangEvent() {
+    $('.navbar_nav .nav_language li').on('click', function() {
+        const lang = $(this).data('language');
+        console.log(window.I18n[lang])
+        modal.lang = lang;
+        changeNavText(lang);
+        changeIndexText(lang);
+        changeHiText(lang);
+        getWorkData(lang);
+        toggleThemeEvent(lang);
+        const text = lang === 'en' ? ' ENGLISH' : ' 繁體中文';
+        $('.nav_language .nav_link_text').text(text)
+    })
+}
+
+function changeHiText(lang) {
+    const I18n = window.I18n[lang]
+    const html = `
+        <h2>${I18n['HI_TITLE']}</h2>
+        <p>${I18n['HI_P_1']}</p>
+        <p>${I18n['HI_P_2']}</p>
+        <p>${I18n['HI_P_3']}</p>`;
+    $('section#hi').html(html);
+}
+
+function changeIndexText(lang) {
+    $('section#index .text').text(window.I18n[lang]['INDEX_TITLE']);
+}
+
+function changeNavText(lang) {
+    const I18n = window.I18n[lang];
+    const links = $('.navbar').find('.nav_link');
+    for (let i = 0; i < links.length; i++) {
+        const $link = $(links[i])
+        if ($link.data('link')==='works') $link.text(I18n['NAV_ITEM_WORK'])
+        if ($link.data('link')==='about') $link.text(I18n['NAV_ITEM_ABOUT'])
+    }
+}
 
 function scrollEvent() {
     $("a").on('click', function (event) {
@@ -16,26 +51,27 @@ function scrollEvent() {
     });
 }
 
-function getWorkData() {
+function getWorkData(lang) {
     $.ajax({
         url: 'data/works.json',
         dataType: 'json',
         success: function(r) {
-            console.log(r);
-            getWork(r)
+            $('section#works').hide()
+            getWork(r, lang)
             modal.datas = r
+            worksLoadEvent(r.length)
         }
     })
 }
 
-function getWork(data) {
+function getWork(data, lang='en') {
     let html = '';
     data.map((work, i) => {
         html += `
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
-            <img src=${work.img} alt=${work.name} />
-            <span class="text">${work.name}</span>
+            <img src=${work.img} alt=${work[lang].name} />
+            <span class="text">${work[lang].name}</span>
         </div>`
     })
     $('section#works').html(html)
@@ -65,6 +101,7 @@ class Modal {
         this.datas = null;
         this.workIndex = null;
         this.$outer = $outer;
+        this.lang = 'en';
         this.getHtml()
         this.closeOnclick()
     }
@@ -89,12 +126,17 @@ class Modal {
         if (this.workIndex === null) return
         this.$outer.addClass('show');
         const data = this.datas[this.workIndex]
+        const I18n = window.I18n[this.lang]
         const html = `
             <div class="modal_main_body_texts">
-                <h2>${data.name}</h2><hr /><p>language / tool : <br>${data.language}</p><p>${data.text}</p>
+                <h2>${data[this.lang].name}</h2><hr /><p>${I18n['MODAL_TEXTS']} : <br>${data.language}</p><p>${data[this.lang].text}</p>
             </div>
             <div class="modal_main_body_img">
-                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data.name} />
+                <div class="modal_main_body_loading">
+                    <div class="loading"></div>
+                    <p class="loadingText">Loading...</p>
+                </div>
+                <img src="${data.img.slice(0,data.img.length-4)+'_1.jpg'}" alt=${data[this.lang].name} />
             </div>`;
         this.$title.text(data.name);
         this.$body.html(html)
@@ -103,7 +145,7 @@ class Modal {
             // 有連結才顯示按紐
             const btn = `
                 <a href=${data.url} target="_blank" class="modal_btn">
-                    <span>Go to demo</span>
+                    <span>${I18n['MODAL_BTN']}</span>
                     <div class="arrow">
                         <img src="img/arrow.png" />
                         <img src="img/arrow_1.png" />
@@ -111,6 +153,18 @@ class Modal {
                 </a>`
             this.$texts.append(btn)
         }
+        this.imgLoadEvent();
+    }
+
+    imgLoadEvent() {
+        const $img = $('.modal_main_body img');
+        const $loading = $('.modal_main_body_loading');
+        $loading.show();
+        $img.hide();
+        $img.on('load', function(){
+            $loading.hide();
+            $img.fadeIn();
+        });
     }
     emptySouce() {
         this.$outer.removeClass('show about')
@@ -146,47 +200,59 @@ class Modal {
                         <h2>專業技能</h2>
                         <hr/>
                         <ul class="skills">
-                            <li>平面設計
-                            <div class="cir">
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                                <div class="p360"></div>
-                            </div>
+                            <li>
+                                <h3>平面設計</h3>
+                                <h5>Graphic design</h5>
+                                <div class="cir">
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                    <div class="p360"></div>
+                                </div>
                             </li>
-                            <li>行銷企劃
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>行銷企劃</h3>
+                                <h5>Marketing planning</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>影片剪輯
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>影片剪輯</h3>
+                                <h5>Movie clip</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>網站開發
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>前端開發</h3>
+                                <h5>Front-end</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
-                            <li>社群行銷
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                            </div>
+                            <li>
+                                <h3>社群行銷</h3>
+                                <h5>Social marketing</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                </div>
                             </li>
-                            <li>專案管理
-                            <div class="cir"> 
-                                <div class="p90"></div>
-                                <div class="p180"></div>
-                                <div class="p270"></div>
-                            </div>
+                            <li>
+                                <h3>專案管理</h3>
+                                <h5>Project management</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
                             </li>
                         </ul>
                         </div>
@@ -260,12 +326,14 @@ class Modal {
                                 <li class="year">2009
                                 <ul> 
                                     <li class="name">復興商工</li>
+                                    <li class="enName">Fu-Hsin Trade & Arts School</li>
                                     <li>廣告設計科 Advertising Design</li>
                                 </ul>
                                 </li>
                                 <li class="year">2011<br/>|<br/>2015
                                 <ul> 
                                     <li class="name">致理科技大學</li>
+                                    <li class="enName">Chihlee University of Technology</li>
                                     <li>多媒體設計系 <br/>Department of Multimedia Design</li>
                                 </ul>
                                 </li>
@@ -284,36 +352,76 @@ function workOnclick() {
         modal.workIndex = $(this).data('index');
         modal.showSouce();
     })
-    
 }
 
+function navbarClick() {
+    const $navbar = $('header.navbar');
+    const $menu = $navbar.find('.navbar_menu');
+    const $langList = $navbar.find('.nav_language_list');
+    
+    $menu.click(function(){
+        $(this).toggleClass('open');
+        $navbar.toggleClass('open');
+        $langList.removeClass('open');
+    })
+    
+    $('.navbar_nav .nav_item').click(function(e){
+        if($(this).find('.nav_link').data('link') === 'about') {
+            $('.modal').addClass('show about');
+            modal.showAbout()
+        }
+        //點選 language 選單不縮起
+        if($(this).hasClass('nav_language')) return
+
+        $langList.removeClass('open');
+        $menu.removeClass('open');
+        $navbar.removeClass('open');
+    })
+}
+
+function toggleThemeEvent(lang='en') {
+    const I18n = window.I18n[lang]
+    const $theme = $('#toggle_theme');
+    const $document = $(document.documentElement);
+    $theme.off('click');
+    $theme.on('click', function() {
+        const $icon = $('.themeIcon .fas')
+        if ($document.attr('theme')) {
+            $document.removeAttr('theme');
+            $icon.removeClass('fa-sun').addClass('fa-moon');
+            $icon.attr('title', I18n['THEME_TITLE_DARK']);
+        }
+        else {
+            $document.attr('theme', 'dark');
+            $icon.removeClass('fa-moon').addClass('fa-sun');
+            $icon.attr('title',I18n['THEME_TITLE_LIGHT']);
+        }
+    })
+}
+
+
+function worksLoadEvent(length) {
+    let load = 0;
+    $('section#works img').on('load',function() {
+        load += 1
+        if(load === length) {
+            $('section#works').fadeIn()
+            $('.outerLoading').hide()
+        }
+    })
+}
+
+function languageEvent() {
+    $('.navbar .nav_language').click(function() {
+        $(this).find('.nav_language_list').toggleClass('open')
+    })
+}
+
+scrollEvent();
 const modal = new Modal($('.modal'));
 getWorkData();
 workOnclick();
-
-$('.navbar-menu').click(function(){
-	$(this).toggleClass('open');
-	$('.navbar').toggleClass('open');
-})
-
-$('.navbar-nav .nav-item').click(function(e){
-    if($(this).find('.nav-link').data('link') === 'about') {
-        $('.modal').addClass('show about');
-        modal.showAbout()
-    }
-    $('.navbar-menu').removeClass('open');
-    $('.navbar').removeClass('open');
-})
-
-$('#toggle-theme').click(function() {
-    console.log("Switching theme");
-    if (document.documentElement.hasAttribute('theme')) {
-        document.documentElement.removeAttribute('theme');
-        $('.themeIcon .fas').removeClass('fa-sun').addClass('fa-moon');
-    }
-    else {
-        document.documentElement.setAttribute('theme', 'dark');
-        $('.themeIcon .fas').removeClass('fa-moon').addClass('fa-sun');
-    }
-    console.log(document.documentElement.hasAttribute('theme'));
-})
+navbarClick();
+changeLangEvent();
+languageEvent();
+toggleThemeEvent();

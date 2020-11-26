@@ -15,9 +15,9 @@
 
 <body>
     <header class="navbar">
-        <a class="navbar-brand" href="#index">
+        <a class="navbar_brand" href="#index">
             <img id="indexLogo" src="img/LOGO.png" alt="logo" /></a>
-        <div class="navbar-menu">
+        <div class="navbar_menu">
             <div id="hamburger">
                 <span></span>
                 <span></span>
@@ -28,14 +28,25 @@
                 <span></span>
             </div>
         </div>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#works" data-link="works">WORK</a>
+        <ul class="navbar_nav">
+            <li class="nav_item">
+                <a class="nav_link" href="#works" data-link="works">WORK</a>
             </li>
-            <li class="nav-item">
-                <span class="nav-link" data-link="about">ABOUT</span>
+            <li class="nav_item">
+                <span class="nav_link" data-link="about">ABOUT</span>
             </li>
-            <li id="toggle-theme" title="切換主題模式">
+            <li class="nav_item nav_language">
+                <div class="nav_link">
+                    <i class="fas fa-globe"></i>
+                    <span class="nav_link_text"> ENGLISH</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <ul class="nav_language_list">
+                    <li data-language="en"><span> English</span></li>
+                    <li data-language="zh-tw"><span> 繁體中文</span></li>
+                </ul>
+            </li>
+            <li id="toggle_theme" title="change dark mode">
                 <div class="themeIcon">
                     <i class="fas fa-moon"></i>
                 </div>
@@ -71,18 +82,23 @@
         <a class="explore at_top" href="#hi"></a>
     </section>
     <section id="hi">
-        <h2>HEY! I'm Wei-Hsin. </h2>
+        <h2>HEY! I'm Wei-Hsin.</h2>
         <p>you can call me Yau.</p>
         <p>I am a green hand in Web front-end, I used to be a graphic designer. :)</p>
         <p>I hope you like my works!</p>
     </section>
-    <section id="works">
-    </section>
+    <div class="outerLoading">
+        <div class="loading"></div>
+        <p class="loadingText">Loading...</p>
+    </div>
+    <section id="works"></section>
     <footer id="footer"> 
         <img class="logo" src="img/LOGO.png" />
     </footer>
     <div class="modal"></div>
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/Lang-en.js"></script>
+    <script src="js/Lang-zh-tw.js"></script>
     <script src="js/main.js"></script>
 </body>
 
