@@ -208,6 +208,19 @@
         }
     },
     {
+        "img": "img/piano.jpg",
+        "url": "https://codepen.io/Yau1221/full/KKwqeBo",
+        "language": "HTML / SASS / Vue.js",
+        "zh-tw": {
+            "name": "Vue.js 鋼琴",
+            "text": "跟著線上課程範例製作的作品。"
+        },
+        "en": {
+            "name": "Vue.js piano",
+            "text": "Sample works created following the web course."
+        }
+    },
+    {
         "img": "img/cardsDesign.jpg",
         "url": "",
         "language": "Photoshop CS6 / Illustrator CS6",
