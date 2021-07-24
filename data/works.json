@@ -1,5 +1,44 @@
 [
     {
+        "img": "img/maxbeauty.jpg",
+        "url": "https://aesthetic-medicine-web.herokuapp.com/",
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "name": "美仕媞醫美網站",
+            "text": "因考量到 SEO，使用 Vue2 及 Nuxt.js 製作 SSR 網頁，目前未串連 API。"
+        },
+        "en": {
+            "name": "max-beauty web",
+            "text": "Due to SEO considerations, Vue2 and Nuxt.js are used to create SSR webpages, and APIs are not currently connected."
+        }
+    },
+    {
+        "img": "img/message.jpg",
+        "url": "https://ending1221.github.io/real-link-system-poster/",
+        "language": "Vue2 / SCSS / SPA",
+        "zh-tw": {
+            "name": "簡訊實聯制海報產生器",
+            "text": "因應政府實施簡訊實聯制，方便無法製圖的店家做使用，也避免有心人士更換 QRcode 造成不必要的損失。"
+        },
+        "en": {
+            "name": "slim-spa",
+            "text": "In response to the government’s implementation of the SMS-based system, it is convenient for stores who can’t design poster to use."
+        }
+    },
+    {
+        "img": "img/slim.jpg",
+        "url": "https://event.smarter.com.tw/newevent/activity/slim-spa/",
+        "language": "HTML / SCSS / jQuery / RWD",
+        "zh-tw": {
+            "name": "削脂鏟肉專案",
+            "text": "一頁式活動網頁，下方預約功能使用 jQuery 製作，並串接 API。 #Design@mina"
+        },
+        "en": {
+            "name": "slim-spa",
+            "text": "One-page event webpage, the reservation is made with jQuery and connected with API. #Design@mina"
+        }
+    },
+    {
         "img": "img/torii.jpg",
         "url": "https://ending1221.github.io/Torii/",
         "language": "HTML / SASS",
