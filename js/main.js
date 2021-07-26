@@ -268,7 +268,7 @@ class Modal {
                                 </li>
                                 <li>JavaScript
                                 <div class="bar"> 
-                                    <div class="value p60"></div>
+                                    <div class="value p70"></div>
                                 </div>
                                 </li>
                                 <li>jQuery
@@ -276,14 +276,14 @@ class Modal {
                                     <div class="value p80"></div>
                                 </div>
                                 </li>
-                                <li>React.js
+                                <li>Vue2
                                 <div class="bar"> 
-                                    <div class="value p40"></div>
+                                    <div class="value p70"></div>
                                 </div>
                                 </li>
                                 <li>Git
                                 <div class="bar"> 
-                                    <div class="value p50"></div>
+                                    <div class="value p60"></div>
                                 </div>
                                 </li>
                             </ul>
@@ -313,7 +313,7 @@ class Modal {
                                 <ul>
                                     <li class="name">前端工程師</li>
                                     <li>Front-end engineer</li>
-                                    <li>獨立完成小型專案 / 與後端串接Api / 優化網站 UX / RWD 響應式網頁 / SPA</li>
+                                    <li>獨立完成中小型專案 / 與後端串接Api / 優化網站 UX / RWD 響應式網頁 / SPA / SSR / Vue / Nuxt</li>
                                 </ul>
                                 </li>
                             </ul>
