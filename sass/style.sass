@@ -146,10 +146,10 @@ header.navbar
                 color: var(--purple_1)
                 padding: 0px
                 text-decoration: none
+
         .nav_language
             position: relative
-            *
-                transition: 0.5s
+            
             .nav_link
                 transition-delay: -.5s
             &_list
@@ -165,7 +165,7 @@ header.navbar
                 opacity: 0.95
                 li
                     background-color: var(--purple_1)
-                    padding: 0 .75rem    
+                    padding: .75rem    
                     cursor: pointer    
                 +mobile
                     position: relative
@@ -338,6 +338,7 @@ section#index
         font-size: 16px
         letter-spacing: 2px
         margin-top: 10px
+
     .explore
         +xcenter
         bottom: 5%
@@ -442,7 +443,7 @@ section#works
         +mobile
             +size(100%,auto)
         &:hover
-            .text,.workbox
+            .text, .workbox, .workclass
                 opacity: 1
         
         a
@@ -470,6 +471,18 @@ section#works
             color: #fff
             transition: 0.5s
             text-align: center
+        .workclass
+            font-size: 8px
+            letter-spacing: 1px
+            z-index: 5
+            opacity: 0
+            color: var(--purple_1)
+            border-radius: 5px
+            border: 1px solid var(--purple_1)
+            padding: 1px 7.5px
+            +xycenter
+            top: 40%
+            
 
 footer#footer
     +size(100%)

@@ -72,9 +72,10 @@ function getWork(data, lang='en') {
             <a class="workbox" target="_blank"></a>
             <img src=${work.img} alt=${work[lang].name} />
             <span class="text">${work[lang].name}</span>
+            <div class="workclass">${work[lang].class}</div>
         </div>`
     })
-    $('section#works').html(html)
+    $('section#works').html(html);
 }
 
 
@@ -181,7 +182,7 @@ class Modal {
         const html = `
             <div class="resume">
                 <div class="information">
-                    <div class="icon"><img src="https://bit.ly/2L055qq"/></div>
+                    <div class="icon"><img src="./img/yau.jpg"/></div>
                     <div class="texts">
                         <h1>徐維欣 <span>Wei-Hsin Hsu</span></h1>
                         <h3>努力打怪的新手前端</h3>
