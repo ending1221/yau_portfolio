@@ -2,6 +2,8 @@
     {
         "img": "img/maxbeauty.jpg",
         "url": "https://aesthetic-medicine-web.herokuapp.com/",
+        "class": "front-end",
+        "tag": [],
         "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
         "zh-tw": {
             "name": "美仕媞醫美網站",
@@ -15,6 +17,8 @@
     {
         "img": "img/message.jpg",
         "url": "https://ending1221.github.io/real-link-system-poster/",
+        "class": "front-end",
+        "tag": [],
         "language": "Vue2 / SCSS / SPA",
         "zh-tw": {
             "name": "簡訊實聯制海報產生器",
@@ -28,6 +32,8 @@
     {
         "img": "img/slim.jpg",
         "url": "https://event.smarter.com.tw/newevent/activity/slim-spa/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / jQuery / RWD",
         "zh-tw": {
             "name": "削脂鏟肉專案",
@@ -39,8 +45,25 @@
         }
     },
     {
+        "img": "img/eform.jpg",
+        "url": "",
+        "class": "front-end",
+        "tag": [],
+        "language": "HTML / SCSS / jQuery / bootstrap / jSignature / papaparse",
+        "zh-tw": {
+            "name": "門市請款後台系統",
+            "text": "因應門市結帳需使用特殊表單，客製表單功能提供門市送出及列印，以及財務部對帳使用。使用 jQuery 製作，並串接 API，並使用套件製作下載 csv 功能，及線上簽名功能。"
+        },
+        "en": {
+            "name": "In-store payment back-office system",
+            "text": "In response to the need to use special forms for store checkout, the custom form function provides store delivery and printing, as well as reconciliation by the financial department. Use jQuery to make, and serialize API, and use the package to make download csv, and online signature."
+        }
+    },
+    {
         "img": "img/torii.jpg",
         "url": "https://ending1221.github.io/Torii/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS",
         "zh-tw": {
             "name": "鳥居",
@@ -54,6 +77,8 @@
     {
         "img": "img/reactPage.jpg",
         "url": "https://ending1221.github.io/react-page/",
+        "class": "front-end",
+        "tag": [],
         "language": "React.js / SCSS / JavaScript / RWD",
         "zh-tw": {
             "name": "React.js 購物車",
@@ -67,6 +92,8 @@
     {
         "img": "img/ems_dashboard.jpg",
         "url": "https://www.notion.so/EMS-4715f6cf6cd7466794d3ac55b5476cfe",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / Bootstrap / jQuery /  Devextreme / CanvasJS / RWD / SPA",
         "zh-tw": {
             "name": "迅杰 EMS 儀表板 (Dashboard)",
@@ -80,6 +107,8 @@
     {
         "img": "img/lavender.jpg",
         "url": "https://ending1221.github.io/Lavender/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS / JavaScript / skrollr.js / RWD",
         "zh-tw": {
             "name": "薰衣草 - 專題網頁",
@@ -93,6 +122,8 @@
     {
         "img": "img/oee.jpg",
         "url": "https://www.notion.so/7dc0608939384b45a58cb55b9d57c291",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / Bootstrap / jQuery /  Devextreme / CanvasJS / RWD / SPA",
         "zh-tw": {
             "name": "迅杰 OEE 儀表板 (Dashboard)",
@@ -106,6 +137,8 @@
     {
         "img": "img/weatherCrystalBall.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_Crystal-ball/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS / API / SVG",
         "zh-tw": {
             "name": "動態天氣水晶球",
@@ -119,6 +152,8 @@
     {
         "img": "img/toemomo_web.jpg",
         "url": "https://ending1221.github.io/TOEMOMO_index/",
+        "class": "front-end",
+        "tag": [],
         "language": "Bootstrap / SASS / jQuery / Vue.js",
         "zh-tw": {
             "name": "Toemomo 主題網頁",
@@ -132,6 +167,8 @@
     {
         "img": "img/hiragana.jpg",
         "url": "https://ending1221.github.io/Japanese-hiragana-transducer/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / JavaScript",
         "zh-tw": {
             "name": "五十音轉換器",
@@ -145,6 +182,8 @@
     {
         "img": "img/catchGame.jpg",
         "url": "https://ending1221.github.io/Catch-game/",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / JavaScript",
         "zh-tw": {
             "name": "接球遊戲",
@@ -158,6 +197,8 @@
     {
         "img": "img/toemomo_character.jpg",
         "url": "https://codepen.io/Yau1221/full/JjoXpVw",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS",
         "zh-tw": {
             "name": "TOEMOMO 角色介紹",
@@ -171,6 +212,8 @@
     {
         "img": "img/shootingDartsGame.jpg",
         "url": "https://codepen.io/Yau1221/full/jOEzRyw",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS / jQuery",
         "zh-tw": {
             "name": "飛鏢射擊遊戲",
@@ -184,6 +227,8 @@
     {
         "img": "img/ems_web.jpg",
         "url": "https://www.notion.so/EMS-a6fd284386ac4149b572a53c5e13fcc9",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SCSS / jQuery / Bootstrap",
         "zh-tw": {
             "name": "迅杰 EMS 行銷網頁",
@@ -197,6 +242,8 @@
     {
         "img": "img/getBeer.jpg",
         "url": "https://codepen.io/Yau1221/full/MWYrdKg",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS",
         "zh-tw": {
             "name": "來點啤酒吧!",
@@ -210,6 +257,8 @@
     {
         "img": "img/buylist.jpg",
         "url": "https://codepen.io/Yau1221/full/ExaydqL",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS",
         "zh-tw": {
             "name": "購物清單",
@@ -223,6 +272,8 @@
     {
         "img": "img/posterDesign.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "海報設計",
@@ -236,6 +287,8 @@
     {
         "img": "img/asahiProject.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "Asahi 設計專案",
@@ -249,6 +302,8 @@
     {
         "img": "img/piano.jpg",
         "url": "https://codepen.io/Yau1221/full/KKwqeBo",
+        "class": "front-end",
+        "tag": [],
         "language": "HTML / SASS / Vue.js",
         "zh-tw": {
             "name": "Vue.js 鋼琴",
@@ -262,6 +317,8 @@
     {
         "img": "img/cardsDesign.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "卡片類設計",
@@ -275,6 +332,8 @@
     {
         "img": "img/damuheiPoliModel.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "大目黑 poil 公仔",
@@ -288,6 +347,8 @@
     {
         "img": "img/giftPremiumDesign.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "贈品設計",
@@ -301,6 +362,8 @@
     {
         "img": "img/couponDesign.jpg",
         "url": "",
+        "class": "design",
+        "tag": [],
         "language": "Photoshop CS6 / Illustrator CS6",
         "zh-tw": {
             "name": "優惠券設計",
