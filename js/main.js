@@ -71,8 +71,11 @@ function getWork(data, lang='en') {
         <div class="work" data-index=${i}>
             <a class="workbox" target="_blank"></a>
             <img src=${work.img} alt=${work[lang].name} />
-            <span class="text">${work[lang].name}</span>
-            <div class="workclass">${work[lang].class}</div>
+            <span class="text">
+                <div class="workclass">${work[lang].class}</div>
+                <p>${work[lang].name}</p>
+            </span>
+            
         </div>`
     })
     $('section#works').html(html);
@@ -202,6 +205,15 @@ class Modal {
                         <hr/>
                         <ul class="skills">
                             <li>
+                                <h3>前端開發</h3>
+                                <h5>Front-end</h5>
+                                <div class="cir"> 
+                                    <div class="p90"></div>
+                                    <div class="p180"></div>
+                                    <div class="p270"></div>
+                                </div>
+                            </li>
+                            <li>
                                 <h3>平面設計</h3>
                                 <h5>Graphic design</h5>
                                 <div class="cir">
@@ -223,15 +235,6 @@ class Modal {
                             <li>
                                 <h3>影片剪輯</h3>
                                 <h5>Movie clip</h5>
-                                <div class="cir"> 
-                                    <div class="p90"></div>
-                                    <div class="p180"></div>
-                                    <div class="p270"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>前端開發</h3>
-                                <h5>Front-end</h5>
                                 <div class="cir"> 
                                     <div class="p90"></div>
                                     <div class="p180"></div>
@@ -310,7 +313,7 @@ class Modal {
                                     <li>行銷活動提案 / POSM設計 / 網站維護 / 社群行銷 / 電商平台管理 / 影片剪輯</li>
                                 </ul>
                                 </li>
-                                <li class="year">2020
+                                <li class="year">2020 <br/>|<br/>Now
                                 <ul>
                                     <li class="name">前端工程師</li>
                                     <li>Front-end engineer</li>

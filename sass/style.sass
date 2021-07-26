@@ -76,7 +76,6 @@ header.navbar
     right: 0
     left: 0
     z-index: 1030
-    transition: 0.5s
     padding: 20px
     display: flex
     justify-content: space-between
@@ -125,7 +124,9 @@ header.navbar
         margin-right: 2.5rem
         display: flex
         flex-wrap: nowrap
-        transition: 0.5s
+
+        +mobile 
+            transition: 0.5s
         
         *
             text-decoration: none
@@ -451,10 +452,11 @@ section#works
         .workbox
             +size(100.5%)
             +xycenter
-            background-color: rgba(0,0,0,0.7)
+            background-color: rgba(0,0,0,0.8)
             opacity: 0
             z-index: 5
             transition: 0.5s
+            text-align: center
 
         img
             width: 100%
@@ -471,8 +473,11 @@ section#works
             color: #fff
             transition: 0.5s
             text-align: center
+            p 
+                margin-top: 10px
         .workclass
             font-size: 8px
+            display: inline-block
             letter-spacing: 1px
             z-index: 5
             opacity: 0
@@ -480,9 +485,7 @@ section#works
             border-radius: 5px
             border: 1px solid var(--purple_1)
             padding: 1px 7.5px
-            transition: 0.5s
-            +xycenter
-            top: 40%
+            white-space: nowrap
             
 
 footer#footer
