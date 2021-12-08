@@ -188,7 +188,7 @@ class Modal {
                     <div class="icon"><img src="./img/yau.jpg"/></div>
                     <div class="texts">
                         <h1>徐維欣 <span>Wei-Hsin Hsu</span></h1>
-                        <h3>努力打怪的新手前端</h3>
+                        <h3>微強迫症的前端工程師</h3>
                         <ul class="contact">
                             <li><i class="fas fa-home"> </i><span>新北市 新莊</span></li>
                             <li><i class="fas fa-envelope-open-text"></i><span>ending1221@gmail.com</span></li>
@@ -315,9 +315,9 @@ class Modal {
                                 </li>
                                 <li class="year">2020 <br/>|<br/>Now
                                 <ul>
-                                    <li class="name">前端工程師</li>
+                                    <li class="name">副理 / 前端工程師</li>
                                     <li>Front-end engineer</li>
-                                    <li>獨立完成中小型專案 / 與後端串接Api / 優化網站 UX / RWD 響應式網頁 / SPA / SSR / Vue / Nuxt</li>
+                                    <li>管理3人以下團隊 / 獨立完成中小型專案 / 與後端串接Api / 優化網站 UX / UI介面設計 / RWD 響應式網頁 / SPA / SSR / Vue / Nuxt / elementUi</li>
                                 </ul>
                                 </li>
                             </ul>
