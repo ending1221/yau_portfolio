@@ -1,5 +1,22 @@
 [
     {
+        "img": "./img/head_spa.jpg",
+        "url": "https://event.smarter.com.tw/2020/head_spa",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "顱釋重負新客專案",
+            "text": "一頁式活動網頁，預約系統使用 Vue / Nuxt.js 撰寫，並寫成共用 Component 讓其他活動頁也可直接套用。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "max-beauty web",
+            "text": "One-page event webpage, the reservation system is written by Vue / Nuxt.js and written as a shared Component so that other event pages can also be directly applied."
+        }
+    },
+    {
         "img": "./img/christmas_activity.jpg",
         "url": "https://event.smarter.com.tw/activity/202112",
         "class": "front-end",
@@ -48,6 +65,23 @@
             "class": "front-end",
             "name": "slim-spa",
             "text": "In response to the government’s implementation of the SMS-based system, it is convenient for stores who can’t design poster to use."
+        }
+    },
+    {
+        "img": "./img/hiring.jpg",
+        "url": "https://event.smarter.com.tw/hr/hiring",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "選擇詩嫚特，做自己 - 徵才網頁",
+            "text": "因應公司大量徵才，製作可線上預約之徵才網站，供人資可直接提取大量預約名單。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "max-beauty web",
+            "text": "In response to the company's large number of talent recruitment, a recruitment website that can be reserved online is produced, and a large number of appointment lists can be directly drawn from the funding."
         }
     },
     {
