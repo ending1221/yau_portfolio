@@ -1,5 +1,22 @@
 [
     {
+        "img": "./img/christmas_activity.jpg",
+        "url": "https://event.smarter.com.tw/activity/202112",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "聖誕跨年感恩年終慶",
+            "text": "一頁式活動網頁，公司專案改為全部使用 Nuxt.js，故使用共同 component，並管理sass變數去做主題修改。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "max-beauty web",
+            "text": "One-page event webpage, the company project is changed to all use Nuxt.js, so used the common component, and the sass variable is managed to make the theme modification."
+        }
+    },
+    {
         "img": "./img/maxbeauty.jpg",
         "url": "https://aesthetic-medicine-web.herokuapp.com/",
         "class": "front-end",
@@ -8,12 +25,12 @@
         "zh-tw": {
             "class": "前端開發",
             "name": "美仕媞醫美網站",
-            "text": "因考量到 SEO，使用 Vue2 及 Nuxt.js 製作 SSR 網頁，目前未串連 API。"
+            "text": "因考量到 SEO，使用 Vue2 及 Nuxt.js 製作 SSR 網頁，此為未串連 API 版本，正式版網址：https://www.max-beauty.com.tw/。"
         },
         "en": {
             "class": "front-end",
             "name": "max-beauty web",
-            "text": "Due to SEO considerations, Vue2 and Nuxt.js are used to create SSR webpages, and APIs are not currently connected."
+            "text": "Due to SEO considerations, Vue2 and Nuxt.js are used to create SSR webpages. This is the unconnected API version. The official version URL: https://www.max-beauty.com.tw/"
         }
     },
     {
@@ -35,14 +52,14 @@
     },
     {
         "img": "./img/slim.jpg",
-        "url": "https://event.smarter.com.tw/newevent/activity/slim-spa/",
+        "url": "",
         "class": "front-end",
         "tag": [],
         "language": "HTML / SCSS / jQuery / RWD",
         "zh-tw": {
             "class": "前端開發",
             "name": "削脂鏟肉專案",
-            "text": "一頁式活動網頁，下方預約功能使用 jQuery 製作，並串接 API。 #Design@mina"
+            "text": "一頁式活動網頁（已下架），下方預約功能使用 jQuery 製作，並串接 API。 #Design@mina"
         },
         "en": {
             "class": "front-end",

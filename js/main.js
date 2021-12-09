@@ -190,7 +190,7 @@ class Modal {
                         <h1>徐維欣 <span>Wei-Hsin Hsu</span></h1>
                         <h3>微強迫症的前端工程師</h3>
                         <ul class="contact">
-                            <li><i class="fas fa-home"> </i><span>新北市 新莊</span></li>
+                            <li><i class="fas fa-home"> </i><span>新北市 三重</span></li>
                             <li><i class="fas fa-envelope-open-text"></i><span>ending1221@gmail.com</span></li>
                             <li><i class="fas fa-mobile-alt"> </i><span>+886 988816884</span></li>
                         </ul>
@@ -211,6 +211,7 @@ class Modal {
                                     <div class="p90"></div>
                                     <div class="p180"></div>
                                     <div class="p270"></div>
+                                    <div class="p360"></div>
                                 </div>
                             </li>
                             <li>
@@ -272,15 +273,15 @@ class Modal {
                                 </li>
                                 <li>JavaScript
                                 <div class="bar"> 
-                                    <div class="value p70"></div>
-                                </div>
-                                </li>
-                                <li>jQuery
-                                <div class="bar"> 
                                     <div class="value p80"></div>
                                 </div>
                                 </li>
                                 <li>Vue2
+                                <div class="bar"> 
+                                    <div class="value p80"></div>
+                                </div>
+                                </li>
+                                <li>Nuxt.js
                                 <div class="bar"> 
                                     <div class="value p70"></div>
                                 </div>
