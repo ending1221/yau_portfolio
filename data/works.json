@@ -1,5 +1,22 @@
 [
     {
+        "img": "./img/carousel.jpg",
+        "url": "",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "門市活動輪播",
+            "text": "原使用外部服務，此服務供行銷人員可直接上刊，門市人員可直接連網址放置在門市輪播供客人觀看。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "event carousel",
+            "text": "Originally using an external service, this service is for marketing staff to directly publish, and store staff can directly connect to the website and place it in the store carousel for guests to watch."
+        }
+    },
+    {
         "img": "./img/head_spa.jpg",
         "url": "https://event.smarter.com.tw/2020/head_spa",
         "class": "front-end",
@@ -12,7 +29,7 @@
         },
         "en": {
             "class": "front-end",
-            "name": "max-beauty web",
+            "name": "head spa event web",
             "text": "One-page event webpage, the reservation system is written by Vue / Nuxt.js and written as a shared Component so that other event pages can also be directly applied."
         }
     },
@@ -29,7 +46,7 @@
         },
         "en": {
             "class": "front-end",
-            "name": "max-beauty web",
+            "name": "christmas activity web",
             "text": "One-page event webpage, the company project is changed to all use Nuxt.js, so used the common component, and the sass variable is managed to make the theme modification."
         }
     },
@@ -48,6 +65,23 @@
             "class": "front-end",
             "name": "max-beauty web",
             "text": "Due to SEO considerations, Vue2 and Nuxt.js are used to create SSR webpages. This is the unconnected API version. The official version URL: https://www.max-beauty.com.tw/"
+        }
+    },
+    {
+        "img": "./img/web_backstage.jpg",
+        "url": "",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "美仕媞醫美網站-後台",
+            "text": "供行銷人員可直接上刊美仕媞網站，並可直接加入 og tag 以優化 SEO。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "max-beauty web backstage",
+            "text": "Marketing personnel can directly publish the max-beauty website, and can directly add og tag to optimize SEO."
         }
     },
     {
