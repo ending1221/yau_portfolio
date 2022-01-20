@@ -1,5 +1,22 @@
 [
     {
+        "img": "./img/hiskio.jpg",
+        "url": "",
+        "class": "front-end",
+        "tag": [],
+        "language": "Nuxt.js / Vue2 / SCSS / SSR / RWD / tailwindCSS",
+        "zh-tw": {
+            "class": "前端開發",
+            "name": "HISKIO 購物車",
+            "text": "仿照 HISKIO 網站購物車，使用 tailwindCSS 完成，實作了加入、刪除購物車及登入功能。"
+        },
+        "en": {
+            "class": "front-end",
+            "name": "HISKIO Cart",
+            "text": "Following the shopping cart of the HISKIO website, it is completed using tailwindCSS, and the functions of adding, deleting shopping carts and logging in are implemented."
+        }
+    },
+    {
         "img": "./img/carousel.jpg",
         "url": "",
         "class": "front-end",
