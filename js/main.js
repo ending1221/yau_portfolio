@@ -316,9 +316,9 @@ class Modal {
                                 </li>
                                 <li class="year">2020 <br/>|<br/>Now
                                 <ul>
-                                    <li class="name">副理 / 前端工程師</li>
+                                    <li class="name">前端工程師</li>
                                     <li>Front-end engineer</li>
-                                    <li>管理3人以下團隊 / 獨立完成中小型專案 / 與後端串接Api / 優化網站 UX / UI介面設計 / RWD 響應式網頁 / SPA / SSR / Vue / Nuxt / elementUi</li>
+                                    <li>管理 5 人以下團隊 / 獨立完成中小型專案 / 與後端串接Api / 優化網站 UX / UI介面設計 / RWD 響應式網頁 / SPA / SSR / Vue / Nuxt / elementUi / tailwind</li>
                                 </ul>
                                 </li>
                             </ul>
